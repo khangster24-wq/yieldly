@@ -48,3 +48,4 @@ For a solo high-school build alongside schoolwork, roughly: Phase 0 (1 week), Ph
 - Verified peer reviews
 - Social/friends comparison layer
 - Live scholarship API integration beyond the curated seed set
+- **Coursework and extracurriculars as chancing factors** — planned once beta feedback is in. Today `assessRisk()` (`src/lib/scoring.ts`) personalizes admit odds from GPA and SAT only; the plan is to extend the same transparent, rules-based approach (no ML) with course rigor (AP/IB/honors load) and extracurricular strength as additional signals in the same explainable formula, plus new fields on `StudentProfile` (`src/lib/types.ts`) and the profile edit screen (`src/app/settings/page.tsx`).
