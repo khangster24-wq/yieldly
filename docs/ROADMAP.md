@@ -18,6 +18,7 @@ Follow this order. Each phase should be genuinely finished (working + styled per
 - Implement the risk scoring formula and ROI scoring formula (documented, rules-based — see `FEATURES.md` §2).
 - Surface risk tier + ROI signal on the discovery cards (this connects back into Phase 1).
 - Build the Portfolio view: saved schools grouped/tiered, aggregate stats, and the diversification meter visualization with `recharts`.
+- **Post-launch addition:** IB Diploma score (0–45) added as a third personalization stat alongside GPA/SAT — collected in onboarding and the profile settings screen, factored into `estimateAdmitProbability()` (`src/lib/scoring.ts`) via a selectivity-derived benchmark, same honest approach as the GPA benchmark (no real per-school IB average exists to compare against). Added specifically because Yieldly's international-schools set targets IB-diploma students, so this stat matters more here than in a US-only chancing tool.
 
 ## Phase 3 — Scholarship Yield Finder
 - Build the curated scholarship seed dataset (`DATA_SOURCES.md`).

@@ -94,6 +94,8 @@ export type IncomeBracket =
 export interface StudentProfile {
   gpa: number | null; // unweighted 0–4.0
   satScore: number | null; // 400–1600, or null if not provided
+  /** IB Diploma total score, 0–45 (predicted or final) — or null if not on the IB track. */
+  ibScore: number | null;
   /** Rough annual budget ceiling (net price the family can absorb). */
   budgetCeiling: number | null;
   incomeBracket: IncomeBracket | null;
@@ -107,6 +109,7 @@ export interface StudentProfile {
 export const EMPTY_PROFILE: StudentProfile = {
   gpa: null,
   satScore: null,
+  ibScore: null,
   budgetCeiling: null,
   incomeBracket: null,
   regions: [],

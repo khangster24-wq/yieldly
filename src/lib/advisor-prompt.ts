@@ -48,6 +48,7 @@ export function buildGroundingContext(
   } else {
     lines.push(`- GPA: ${profile.gpa ?? "not provided"}`);
     lines.push(`- SAT: ${profile.satScore ?? "not provided"}`);
+    lines.push(`- IB score: ${profile.ibScore ?? "not provided"}`);
     lines.push(
       `- Budget ceiling: ${
         profile.budgetCeiling != null ? formatUSD(profile.budgetCeiling) + "/yr net" : "not provided"

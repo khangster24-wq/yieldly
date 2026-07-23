@@ -62,22 +62,36 @@ const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v
 function estimateAdmitProbability(
   college: College,
   profile: StudentProfile | null
-): { probability: number | null; personalized: boolean; usedSat: boolean; usedGpa: boolean } {
+): {
+  probability: number | null;
+  personalized: boolean;
+  usedSat: boolean;
+  usedGpa: boolean;
+  usedIb: boolean;
+} {
   const base = college.admissionRate;
   if (base == null)
-    return { probability: null, personalized: false, usedSat: false, usedGpa: false };
+    return {
+      probability: null,
+      personalized: false,
+      usedSat: false,
+      usedGpa: false,
+      usedIb: false,
+    };
 
   const unpersonalized = {
     probability: base,
     personalized: false,
     usedSat: false,
     usedGpa: false,
+    usedIb: false,
   };
   if (profile?.completedOnboarding !== true) return unpersonalized;
 
   const signals: number[] = [];
   let usedSat = false;
   let usedGpa = false;
+  let usedIb = false;
 
   if (profile.satScore != null && college.satAverage != null) {
     signals.push((profile.satScore - college.satAverage) / 100);
@@ -89,20 +103,31 @@ function estimateAdmitProbability(
     signals.push((profile.gpa - benchmarkGpa) * 3.2);
     usedGpa = true;
   }
+  if (profile.ibScore != null) {
+    // No school publishes a per-institution "average IB score" the way Scorecard
+    // publishes SAT averages, so — same honest approach as the GPA benchmark
+    // above — this derives an expected IB score from the school's real admit
+    // rate rather than inventing a per-school figure: ~41 at the most selective
+    // end down to ~28 at the least, scored in ~3-point steps (roughly comparable
+    // rigor to a 100-point SAT step). Rules-based estimate, not a published bar.
+    const benchmarkIb = clamp(41 - base * 9, 28, 41);
+    signals.push((profile.ibScore - benchmarkIb) / 3);
+    usedIb = true;
+  }
 
   if (signals.length === 0) return unpersonalized;
 
   const edge = signals.reduce((a, b) => a + b, 0) / signals.length;
   const multiplier = clamp(1 + edge * 0.26, 0.35, 2.4);
   const probability = clamp(base * multiplier, 0.02, 0.98);
-  return { probability, personalized: true, usedSat, usedGpa };
+  return { probability, personalized: true, usedSat, usedGpa, usedIb };
 }
 
 export function assessRisk(
   college: College,
   profile: StudentProfile | null
 ): RiskAssessment {
-  const { probability, personalized, usedSat, usedGpa } = estimateAdmitProbability(
+  const { probability, personalized, usedSat, usedGpa, usedIb } = estimateAdmitProbability(
     college,
     profile
   );
@@ -131,7 +156,13 @@ export function assessRisk(
 
   let rationale: string;
   if (personalized) {
-    const stats = [usedGpa && "GPA", usedSat && "SAT"].filter(Boolean).join(" and ");
+    const statNames = [usedGpa && "GPA", usedSat && "SAT", usedIb && "IB score"].filter(
+      Boolean
+    ) as string[];
+    const stats =
+      statNames.length > 1
+        ? `${statNames.slice(0, -1).join(", ")} and ${statNames[statNames.length - 1]}`
+        : statNames[0];
     rationale = `Your ${stats} weighed against this school's ${formatPercent(
       college.admissionRate
     )} admit rate${usedSat ? ` and ~${college.satAverage} average SAT` : ""}.`;

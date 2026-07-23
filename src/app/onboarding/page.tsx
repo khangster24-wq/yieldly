@@ -151,6 +151,28 @@ export default function OnboardingPage() {
                       Out of 1600. Leave blank if you&apos;re test-optional.
                     </p>
                   </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="ib">IB score</Label>
+                    <Input
+                      id="ib"
+                      type="number"
+                      inputMode="numeric"
+                      step="1"
+                      min="0"
+                      max="45"
+                      placeholder="e.g. 38"
+                      value={draft.ibScore ?? ""}
+                      onChange={(e) =>
+                        setDraft((d) => ({
+                          ...d,
+                          ibScore: e.target.value ? Number(e.target.value) : null,
+                        }))
+                      }
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Out of 45 (predicted or final). Leave blank if you&apos;re not on the IB Diploma track.
+                    </p>
+                  </div>
                 </div>
               </StepShell>
             )}
