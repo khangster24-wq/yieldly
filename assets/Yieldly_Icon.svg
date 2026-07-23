@@ -1,0 +1,19 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B6BFF"/>
+      <stop offset="100%" stop-color="#1533A6"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="200" height="200" rx="44" fill="url(#bg)"/>
+  <!-- uptrend line (yield) rising into a swipe-right chevron -->
+  <polyline points="42,138 78,110 100,124 150,68"
+            fill="none" stroke="#FFFFFF" stroke-width="12"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- arrowhead / swipe chevron at the tip -->
+  <polyline points="122,66 152,66 152,96"
+            fill="none" stroke="#FFFFFF" stroke-width="12"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- accent dot marking the "match" point -->
+  <circle cx="100" cy="124" r="10" fill="#FF6B6B"/>
+</svg>

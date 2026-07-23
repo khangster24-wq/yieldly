@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Yieldly theme variables. The brand palette lives as literal hex in
+ * tailwind.config.ts; here we translate it into the HSL-based semantic tokens
+ * that shadcn/ui components expect, so buttons/inputs/dialogs inherit the brand
+ * automatically. Keep both in sync — same colors, two consumers.
+ */
+@layer base {
+  :root {
+    --background: 225 100% 98%; /* #F7F9FF surface */
+    --foreground: 222 74% 17%; /* #0B1F4D navy */
+
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 222 74% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 74% 17%;
+
+    --primary: 225 100% 62%; /* #3B6BFF yieldly-blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 225 60% 96%; /* soft blue tint */
+    --secondary-foreground: 222 74% 17%;
+
+    --muted: 225 60% 96%;
+    --muted-foreground: 223 27% 47%; /* #5B6B96 */
+
+    --accent: 0 100% 71%; /* #FF6B6B coral */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 100% 71%; /* coral doubles as alert per design system */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 227 71% 93%; /* #E3E8FA hairline */
+    --input: 227 71% 93%;
+    --ring: 225 100% 62%; /* focus ring = brand blue */
+
+    --radius: 1.25rem; /* 20px — generous rounded-square feel */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-surface text-navy font-sans antialiased;
+    /* Prevent the swipe deck from triggering page scroll/bounce on touch. */
+    overscroll-behavior-y: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+  /* Numbers/data read as tabular + slightly bolder, per the design system. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+}
+
+@layer utilities {
+  .text-gradient-brand {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+  /* Hide scrollbars on horizontal chip rows without losing scrollability. */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
