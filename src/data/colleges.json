@@ -25,7 +25,12 @@
       "roomBoard": 11402,
       "medianEarnings10yr": 40628,
       "medianDebt": 31000,
-      "satAverage": 938
+      "satAverage": 938,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 138716,
@@ -49,7 +54,12 @@
       "roomBoard": 11899,
       "medianEarnings10yr": 40674,
       "medianDebt": 25024,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Health Professions",
+        "Liberal Arts & Humanities",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 217633,
@@ -73,7 +83,12 @@
       "roomBoard": 12720,
       "medianEarnings10yr": 42101,
       "medianDebt": 26700,
-      "satAverage": 1202
+      "satAverage": 1202,
+      "topMajors": [
+        "Business & Marketing",
+        "Education",
+        "Health Professions"
+      ]
     },
     {
       "id": 197869,
@@ -97,7 +112,12 @@
       "roomBoard": 12868,
       "medianEarnings10yr": 51836,
       "medianDebt": 20231,
-      "satAverage": 1214
+      "satAverage": 1214,
+      "topMajors": [
+        "Business & Marketing",
+        "Biological & Biomedical Sciences",
+        "Psychology"
+      ]
     },
     {
       "id": 104151,
@@ -121,7 +141,12 @@
       "roomBoard": 16712,
       "medianEarnings10yr": 62668,
       "medianDebt": 19500,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Biological & Biomedical Sciences",
+        "Engineering"
+      ]
     },
     {
       "id": 100858,
@@ -145,7 +170,12 @@
       "roomBoard": 16626,
       "medianEarnings10yr": 65337,
       "medianDebt": 21000,
-      "satAverage": 1345
+      "satAverage": 1345,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 189097,
@@ -169,7 +199,12 @@
       "roomBoard": 21714,
       "medianEarnings10yr": 80516,
       "medianDebt": 18000,
-      "satAverage": 1520
+      "satAverage": 1520,
+      "topMajors": [
+        "Social Sciences",
+        "Biological & Biomedical Sciences",
+        "Multi/Interdisciplinary Studies"
+      ]
     },
     {
       "id": 223232,
@@ -193,7 +228,12 @@
       "roomBoard": 15314,
       "medianEarnings10yr": 65793,
       "medianDebt": 23000,
-      "satAverage": 1329
+      "satAverage": 1329,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 180814,
@@ -217,7 +257,12 @@
       "roomBoard": 11235,
       "medianEarnings10yr": 61289,
       "medianDebt": 20000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Health Professions"
+      ]
     },
     {
       "id": 173124,
@@ -241,7 +286,12 @@
       "roomBoard": 10462,
       "medianEarnings10yr": 53755,
       "medianDebt": 19750,
-      "satAverage": 1090
+      "satAverage": 1090,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Psychology"
+      ]
     },
     {
       "id": 164739,
@@ -265,7 +315,12 @@
       "roomBoard": 20140,
       "medianEarnings10yr": 120959,
       "medianDebt": 25023,
-      "satAverage": 1352
+      "satAverage": 1352,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Multi/Interdisciplinary Studies"
+      ]
     },
     {
       "id": 164748,
@@ -289,7 +344,12 @@
       "roomBoard": 19930,
       "medianEarnings10yr": 33647,
       "medianDebt": 25000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Visual & Performing Arts",
+        "Computer & Information Sciences",
+        "Engineering Technology"
+      ]
     },
     {
       "id": 196079,
@@ -313,7 +373,12 @@
       "roomBoard": 18809,
       "medianEarnings10yr": 80596,
       "medianDebt": 18500,
-      "satAverage": 1415
+      "satAverage": 1415,
+      "topMajors": [
+        "Biological & Biomedical Sciences",
+        "Business & Marketing",
+        "Social Sciences"
+      ]
     },
     {
       "id": 164924,
@@ -337,7 +402,12 @@
       "roomBoard": 18916,
       "medianEarnings10yr": 103937,
       "medianDebt": 19000,
-      "satAverage": 1507
+      "satAverage": 1507,
+      "topMajors": [
+        "Business & Marketing",
+        "Social Sciences",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 164988,
@@ -361,7 +431,12 @@
       "roomBoard": 19020,
       "medianEarnings10yr": 83238,
       "medianDebt": 23250,
-      "satAverage": 1480
+      "satAverage": 1480,
+      "topMajors": [
+        "Business & Marketing",
+        "Social Sciences",
+        "Communication"
+      ]
     },
     {
       "id": 165015,
@@ -385,7 +460,12 @@
       "roomBoard": 19944,
       "medianEarnings10yr": 77231,
       "medianDebt": 25648,
-      "satAverage": 1462
+      "satAverage": 1462,
+      "topMajors": [
+        "Social Sciences",
+        "Biological & Biomedical Sciences",
+        "Psychology"
+      ]
     },
     {
       "id": 230038,
@@ -409,7 +489,12 @@
       "roomBoard": 10396,
       "medianEarnings10yr": 75790,
       "medianDebt": 11069,
-      "satAverage": 1376
+      "satAverage": 1376,
+      "topMajors": [
+        "Business & Marketing",
+        "Biological & Biomedical Sciences",
+        "Engineering"
+      ]
     },
     {
       "id": 217156,
@@ -433,7 +518,12 @@
       "roomBoard": 17444,
       "medianEarnings10yr": 93487,
       "medianDebt": 11428,
-      "satAverage": 1546
+      "satAverage": 1546,
+      "topMajors": [
+        "Social Sciences",
+        "Computer & Information Sciences",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 211291,
@@ -457,7 +547,12 @@
       "roomBoard": 16924,
       "medianEarnings10yr": 93807,
       "medianDebt": 27000,
-      "satAverage": 1410
+      "satAverage": 1410,
+      "topMajors": [
+        "Social Sciences",
+        "Engineering",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 110422,
@@ -481,7 +576,12 @@
       "roomBoard": 18792,
       "medianEarnings10yr": 90768,
       "medianDebt": 18500,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Engineering",
+        "Business & Marketing",
+        "Agriculture"
+      ]
     },
     {
       "id": 110529,
@@ -505,7 +605,12 @@
       "roomBoard": 16682,
       "medianEarnings10yr": 71902,
       "medianDebt": 16000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Social Sciences"
+      ]
     },
     {
       "id": 110556,
@@ -529,7 +634,12 @@
       "roomBoard": 11960,
       "medianEarnings10yr": 61244,
       "medianDebt": 14505,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Psychology",
+        "Social Sciences"
+      ]
     },
     {
       "id": 110565,
@@ -553,7 +663,12 @@
       "roomBoard": 19080,
       "medianEarnings10yr": 62951,
       "medianDebt": 13750,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Psychology",
+        "Communication"
+      ]
     },
     {
       "id": 110583,
@@ -577,7 +692,12 @@
       "roomBoard": 15612,
       "medianEarnings10yr": 64403,
       "medianDebt": 14289,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Visual & Performing Arts",
+        "Engineering"
+      ]
     },
     {
       "id": 110592,
@@ -601,7 +721,12 @@
       "roomBoard": 19696,
       "medianEarnings10yr": 59211,
       "medianDebt": 13000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Psychology"
+      ]
     },
     {
       "id": 110608,
@@ -625,7 +750,12 @@
       "roomBoard": 13804,
       "medianEarnings10yr": 59115,
       "medianDebt": 13872,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Psychology",
+        "Communication"
+      ]
     },
     {
       "id": 110617,
@@ -649,7 +779,12 @@
       "roomBoard": 19174,
       "medianEarnings10yr": 64876,
       "medianDebt": 15000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Health Professions",
+        "Business & Marketing",
+        "Social Sciences"
+      ]
     },
     {
       "id": 211440,
@@ -673,7 +808,12 @@
       "roomBoard": 18166,
       "medianEarnings10yr": 114862,
       "medianDebt": 21750,
-      "satAverage": 1546
+      "satAverage": 1546,
+      "topMajors": [
+        "Engineering",
+        "Computer & Information Sciences",
+        "Mathematics & Statistics"
+      ]
     },
     {
       "id": 201645,
@@ -697,7 +837,12 @@
       "roomBoard": 18762,
       "medianEarnings10yr": 87989,
       "medianDebt": 24000,
-      "satAverage": 1513
+      "satAverage": 1513,
+      "topMajors": [
+        "Engineering",
+        "Biological & Biomedical Sciences",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 217882,
@@ -721,7 +866,12 @@
       "roomBoard": 13284,
       "medianEarnings10yr": 71513,
       "medianDebt": 21500,
-      "satAverage": 1353
+      "satAverage": 1353,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Social Sciences"
+      ]
     },
     {
       "id": 190099,
@@ -745,7 +895,12 @@
       "roomBoard": 17610,
       "medianEarnings10yr": 85139,
       "medianDebt": 15000,
-      "satAverage": 1508
+      "satAverage": 1508,
+      "topMajors": [
+        "Social Sciences",
+        "Biological & Biomedical Sciences",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 166124,
@@ -769,7 +924,12 @@
       "roomBoard": 18820,
       "medianEarnings10yr": 90543,
       "medianDebt": 27000,
-      "satAverage": 1353
+      "satAverage": 1353,
+      "topMajors": [
+        "Social Sciences",
+        "Biological & Biomedical Sciences",
+        "Psychology"
+      ]
     },
     {
       "id": 126669,
@@ -793,7 +953,12 @@
       "roomBoard": 13234,
       "medianEarnings10yr": 50416,
       "medianDebt": 28312,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Psychology",
+        "Business & Marketing",
+        "Health Professions"
+      ]
     },
     {
       "id": 126818,
@@ -817,7 +982,12 @@
       "roomBoard": 16817,
       "medianEarnings10yr": 60543,
       "medianDebt": 20000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Biological & Biomedical Sciences",
+        "Engineering"
+      ]
     },
     {
       "id": 190150,
@@ -841,7 +1011,12 @@
       "roomBoard": 17580,
       "medianEarnings10yr": 102491,
       "medianDebt": 21500,
-      "satAverage": 1553
+      "satAverage": 1553,
+      "topMajors": [
+        "Social Sciences",
+        "Computer & Information Sciences",
+        "Engineering"
+      ]
     },
     {
       "id": 190415,
@@ -865,7 +1040,12 @@
       "roomBoard": 19428,
       "medianEarnings10yr": 104043,
       "medianDebt": 14000,
-      "satAverage": 1535
+      "satAverage": 1535,
+      "topMajors": [
+        "Computer & Information Sciences",
+        "Engineering",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 190512,
@@ -889,7 +1069,12 @@
       "roomBoard": 18832,
       "medianEarnings10yr": 75971,
       "medianDebt": 11512,
-      "satAverage": 1280
+      "satAverage": 1280,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Psychology"
+      ]
     },
     {
       "id": 190549,
@@ -913,7 +1098,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 60752,
       "medianDebt": 11000,
-      "satAverage": 1140
+      "satAverage": 1140,
+      "topMajors": [
+        "Business & Marketing",
+        "Psychology",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 190594,
@@ -937,7 +1127,12 @@
       "roomBoard": 11832,
       "medianEarnings10yr": 63163,
       "medianDebt": 11000,
-      "satAverage": 1280
+      "satAverage": 1280,
+      "topMajors": [
+        "Psychology",
+        "Multi/Interdisciplinary Studies",
+        "Social Sciences"
+      ]
     },
     {
       "id": 190600,
@@ -961,7 +1156,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 56195,
       "medianDebt": 11000,
-      "satAverage": 1080
+      "satAverage": 1080,
+      "topMajors": [
+        "Security & Law Enforcement",
+        "Psychology",
+        "Social Sciences"
+      ]
     },
     {
       "id": 190637,
@@ -985,7 +1185,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 58013,
       "medianDebt": 10950,
-      "satAverage": 970
+      "satAverage": 970,
+      "topMajors": [
+        "Health Professions",
+        "Business & Marketing",
+        "Psychology"
+      ]
     },
     {
       "id": 182670,
@@ -1009,7 +1214,12 @@
       "roomBoard": 19999,
       "medianEarnings10yr": 97434,
       "medianDebt": 17500,
-      "satAverage": 1534
+      "satAverage": 1534,
+      "topMajors": [
+        "Social Sciences",
+        "Engineering",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 130934,
@@ -1033,7 +1243,12 @@
       "roomBoard": 16664,
       "medianEarnings10yr": 49307,
       "medianDebt": 26000,
-      "satAverage": 940
+      "satAverage": 940,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 198419,
@@ -1057,7 +1272,12 @@
       "roomBoard": 18128,
       "medianEarnings10yr": 97800,
       "medianDebt": 13000,
-      "satAverage": 1548
+      "satAverage": 1548,
+      "topMajors": [
+        "Multi/Interdisciplinary Studies",
+        "Engineering",
+        "Social Sciences"
+      ]
     },
     {
       "id": 198464,
@@ -1081,7 +1301,12 @@
       "roomBoard": 11541,
       "medianEarnings10yr": 55146,
       "medianDebt": 22750,
-      "satAverage": 1180
+      "satAverage": 1180,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Engineering Technology"
+      ]
     },
     {
       "id": 426314,
@@ -1104,7 +1329,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 84131,
       "medianDebt": 23666,
-      "satAverage": 1148
+      "satAverage": 1148,
+      "topMajors": [
+        "Transportation & Materials Moving",
+        "Business & Marketing",
+        "Mechanic & Repair Technologies"
+      ]
     },
     {
       "id": 165662,
@@ -1128,7 +1358,12 @@
       "roomBoard": 20920,
       "medianEarnings10yr": 62832,
       "medianDebt": 23000,
-      "satAverage": 1358
+      "satAverage": 1358,
+      "topMajors": [
+        "Visual & Performing Arts",
+        "Communication",
+        "English Language & Literature"
+      ]
     },
     {
       "id": 139658,
@@ -1152,7 +1387,12 @@
       "roomBoard": 20220,
       "medianEarnings10yr": 80137,
       "medianDebt": 18250,
-      "satAverage": 1520
+      "satAverage": 1520,
+      "topMajors": [
+        "Business & Marketing",
+        "Biological & Biomedical Sciences",
+        "Social Sciences"
+      ]
     },
     {
       "id": 196264,
@@ -1176,7 +1416,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 54080,
       "medianDebt": 18730,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Liberal Arts & Humanities",
+        "Public Administration & Social Service"
+      ]
     },
     {
       "id": 129242,
@@ -1200,7 +1445,12 @@
       "roomBoard": 19838,
       "medianEarnings10yr": 88794,
       "medianDebt": 26000,
-      "satAverage": 1335
+      "satAverage": 1335,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Communication"
+      ]
     },
     {
       "id": 133650,
@@ -1224,7 +1474,12 @@
       "roomBoard": 12328,
       "medianEarnings10yr": 44349,
       "medianDebt": 23548,
-      "satAverage": 1107
+      "satAverage": 1107,
+      "topMajors": [
+        "Health Professions",
+        "Business & Marketing",
+        "Psychology"
+      ]
     },
     {
       "id": 133669,
@@ -1248,7 +1503,12 @@
       "roomBoard": 15860,
       "medianEarnings10yr": 56746,
       "medianDebt": 17236,
-      "satAverage": 1127
+      "satAverage": 1127,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Multi/Interdisciplinary Studies"
+      ]
     },
     {
       "id": 133881,
@@ -1272,7 +1532,12 @@
       "roomBoard": 15240,
       "medianEarnings10yr": 43137,
       "medianDebt": 27000,
-      "satAverage": 1225
+      "satAverage": 1225,
+      "topMajors": [
+        "Engineering",
+        "Transportation & Materials Moving",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 133951,
@@ -1296,7 +1561,12 @@
       "roomBoard": 13080,
       "medianEarnings10yr": 60249,
       "medianDebt": 16500,
-      "satAverage": 1163
+      "satAverage": 1163,
+      "topMajors": [
+        "Business & Marketing",
+        "Psychology",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 134097,
@@ -1320,7 +1590,12 @@
       "roomBoard": 13474,
       "medianEarnings10yr": 61675,
       "medianDebt": 18000,
-      "satAverage": 1361
+      "satAverage": 1361,
+      "topMajors": [
+        "Business & Marketing",
+        "Social Sciences",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 191241,
@@ -1344,7 +1619,12 @@
       "roomBoard": 24090,
       "medianEarnings10yr": 85569,
       "medianDebt": 24300,
-      "satAverage": 1418
+      "satAverage": 1418,
+      "topMajors": [
+        "Business & Marketing",
+        "Social Sciences",
+        "Mathematics & Statistics"
+      ]
     },
     {
       "id": 202806,
@@ -1368,7 +1648,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 51892,
       "medianDebt": 20836,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Health Professions"
+      ]
     },
     {
       "id": 232186,
@@ -1392,7 +1677,12 @@
       "roomBoard": 15725,
       "medianEarnings10yr": 76343,
       "medianDebt": 19500,
-      "satAverage": 1274
+      "satAverage": 1274,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Security & Law Enforcement"
+      ]
     },
     {
       "id": 131469,
@@ -1416,7 +1706,12 @@
       "roomBoard": 16920,
       "medianEarnings10yr": 90873,
       "medianDebt": 20449,
-      "satAverage": 1433
+      "satAverage": 1433,
+      "topMajors": [
+        "Social Sciences",
+        "Business & Marketing",
+        "Health Professions"
+      ]
     },
     {
       "id": 131496,
@@ -1440,7 +1735,12 @@
       "roomBoard": 20596,
       "medianEarnings10yr": 103494,
       "medianDebt": 15500,
-      "satAverage": 1487
+      "satAverage": 1487,
+      "topMajors": [
+        "Social Sciences",
+        "Business & Marketing",
+        "Legal Professions"
+      ]
     },
     {
       "id": 139755,
@@ -1464,7 +1764,12 @@
       "roomBoard": 13608,
       "medianEarnings10yr": 102772,
       "medianDebt": 21672,
-      "satAverage": 1480
+      "satAverage": 1480,
+      "topMajors": [
+        "Engineering",
+        "Computer & Information Sciences",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 139931,
@@ -1488,7 +1793,12 @@
       "roomBoard": 11492,
       "medianEarnings10yr": 53236,
       "medianDebt": 23250,
-      "satAverage": 1053
+      "satAverage": 1053,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Social Sciences"
+      ]
     },
     {
       "id": 139940,
@@ -1512,7 +1822,12 @@
       "roomBoard": 13392,
       "medianEarnings10yr": 47384,
       "medianDebt": 20903,
-      "satAverage": 1076
+      "satAverage": 1076,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Multi/Interdisciplinary Studies"
+      ]
     },
     {
       "id": 159009,
@@ -1536,7 +1851,12 @@
       "roomBoard": 10990,
       "medianEarnings10yr": 41109,
       "medianDebt": 36500,
-      "satAverage": 943
+      "satAverage": 943,
+      "topMajors": [
+        "Security & Law Enforcement",
+        "Business & Marketing",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 104717,
@@ -1560,7 +1880,12 @@
       "roomBoard": 11700,
       "medianEarnings10yr": 42186,
       "medianDebt": 22114,
-      "satAverage": 1077
+      "satAverage": 1077,
+      "topMajors": [
+        "Health Professions",
+        "Business & Marketing",
+        "Public Administration & Social Service"
+      ]
     },
     {
       "id": 170082,
@@ -1584,7 +1909,12 @@
       "roomBoard": 11550,
       "medianEarnings10yr": 56118,
       "medianDebt": 24500,
-      "satAverage": 1074
+      "satAverage": 1074,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 166027,
@@ -1608,7 +1938,12 @@
       "roomBoard": 21190,
       "medianEarnings10yr": 101817,
       "medianDebt": 14000,
-      "satAverage": 1553
+      "satAverage": 1553,
+      "topMajors": [
+        "Social Sciences",
+        "Biological & Biomedical Sciences",
+        "Mathematics & Statistics"
+      ]
     },
     {
       "id": 131520,
@@ -1632,7 +1967,12 @@
       "roomBoard": 17322,
       "medianEarnings10yr": 63066,
       "medianDebt": 24500,
-      "satAverage": 1213
+      "satAverage": 1213,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Communication"
+      ]
     },
     {
       "id": 142276,
@@ -1656,7 +1996,12 @@
       "roomBoard": 7882,
       "medianEarnings10yr": 45608,
       "medianDebt": 20039,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Health Professions",
+        "Liberal Arts & Humanities",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 145813,
@@ -1680,7 +2025,12 @@
       "roomBoard": 11754,
       "medianEarnings10yr": 62117,
       "medianDebt": 20482,
-      "satAverage": 1113
+      "satAverage": 1113,
+      "topMajors": [
+        "Business & Marketing",
+        "Education",
+        "Health Professions"
+      ]
     },
     {
       "id": 151351,
@@ -1704,7 +2054,12 @@
       "roomBoard": 13984,
       "medianEarnings10yr": 63742,
       "medianDebt": 19509,
-      "satAverage": 1313
+      "satAverage": 1313,
+      "topMajors": [
+        "Liberal Arts & Humanities",
+        "Business & Marketing",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 488679,
@@ -1728,7 +2083,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 59986,
       "medianDebt": 24250,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Liberal Arts & Humanities"
+      ]
     },
     {
       "id": 242705,
@@ -1751,7 +2111,12 @@
       "roomBoard": 8889,
       "medianEarnings10yr": 29936,
       "medianDebt": 8250,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Biological & Biomedical Sciences",
+        "Personal & Culinary Services",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 153603,
@@ -1775,7 +2140,12 @@
       "roomBoard": 10808,
       "medianEarnings10yr": 63386,
       "medianDebt": 22869,
-      "satAverage": 1204
+      "satAverage": 1204,
+      "topMajors": [
+        "Engineering",
+        "Business & Marketing",
+        "Agriculture"
+      ]
     },
     {
       "id": 232423,
@@ -1799,7 +2169,12 @@
       "roomBoard": 13056,
       "medianEarnings10yr": 69954,
       "medianDebt": 20093,
-      "satAverage": 1256
+      "satAverage": 1256,
+      "topMajors": [
+        "Health Professions",
+        "Business & Marketing",
+        "Communication"
+      ]
     },
     {
       "id": 162928,
@@ -1823,7 +2198,12 @@
       "roomBoard": 20150,
       "medianEarnings10yr": 87555,
       "medianDebt": 10250,
-      "satAverage": 1553
+      "satAverage": 1553,
+      "topMajors": [
+        "Biological & Biomedical Sciences",
+        "Engineering",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 486840,
@@ -1847,7 +2227,12 @@
       "roomBoard": 13287,
       "medianEarnings10yr": 57552,
       "medianDebt": 23833,
-      "satAverage": 1113
+      "satAverage": 1113,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Engineering"
+      ]
     },
     {
       "id": 203517,
@@ -1871,7 +2256,12 @@
       "roomBoard": 13794,
       "medianEarnings10yr": 45388,
       "medianDebt": 24500,
-      "satAverage": 1099
+      "satAverage": 1099,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Visual & Performing Arts"
+      ]
     },
     {
       "id": 213543,
@@ -1895,7 +2285,12 @@
       "roomBoard": 17220,
       "medianEarnings10yr": 105584,
       "medianDebt": 21960,
-      "satAverage": 1440
+      "satAverage": 1440,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 232557,
@@ -1919,7 +2314,12 @@
       "roomBoard": 13835,
       "medianEarnings10yr": 44813,
       "medianDebt": 24500,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Multi/Interdisciplinary Studies",
+        "Psychology"
+      ]
     },
     {
       "id": 177968,
@@ -1943,7 +2343,12 @@
       "roomBoard": 11700,
       "medianEarnings10yr": 53278,
       "medianDebt": 26000,
-      "satAverage": 1190
+      "satAverage": 1190,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Visual & Performing Arts"
+      ]
     },
     {
       "id": 159391,
@@ -1967,7 +2372,12 @@
       "roomBoard": 15142,
       "medianEarnings10yr": 61251,
       "medianDebt": 20500,
-      "satAverage": 1285
+      "satAverage": 1285,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Education"
+      ]
     },
     {
       "id": 117946,
@@ -1991,7 +2401,12 @@
       "roomBoard": 22026,
       "medianEarnings10yr": 78349,
       "medianDebt": 19500,
-      "satAverage": 1359
+      "satAverage": 1359,
+      "topMajors": [
+        "Business & Marketing",
+        "Visual & Performing Arts",
+        "Social Sciences"
+      ]
     },
     {
       "id": 192819,
@@ -2015,7 +2430,12 @@
       "roomBoard": 18460,
       "medianEarnings10yr": 77819,
       "medianDebt": 25000,
-      "satAverage": 1295
+      "satAverage": 1295,
+      "topMajors": [
+        "Business & Marketing",
+        "Communication",
+        "Psychology"
+      ]
     },
     {
       "id": 166683,
@@ -2039,7 +2459,12 @@
       "roomBoard": 20280,
       "medianEarnings10yr": 143372,
       "medianDebt": 14768,
-      "satAverage": 1560
+      "satAverage": 1560,
+      "topMajors": [
+        "Computer & Information Sciences",
+        "Engineering",
+        "Mathematics & Statistics"
+      ]
     },
     {
       "id": 171100,
@@ -2063,7 +2488,12 @@
       "roomBoard": 12564,
       "medianEarnings10yr": 67253,
       "medianDebt": 23250,
-      "satAverage": 1269
+      "satAverage": 1269,
+      "topMajors": [
+        "Business & Marketing",
+        "Biological & Biomedical Sciences",
+        "Communication"
+      ]
     },
     {
       "id": 174358,
@@ -2087,7 +2517,12 @@
       "roomBoard": 10994,
       "medianEarnings10yr": 50527,
       "medianDebt": 20000,
-      "satAverage": 1090
+      "satAverage": 1090,
+      "topMajors": [
+        "Health Professions",
+        "Business & Marketing",
+        "Education"
+      ]
     },
     {
       "id": 176080,
@@ -2111,7 +2546,12 @@
       "roomBoard": 12902,
       "medianEarnings10yr": 51513,
       "medianDebt": 22142,
-      "satAverage": 1219
+      "satAverage": 1219,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Multi/Interdisciplinary Studies"
+      ]
     },
     {
       "id": 119605,
@@ -2133,7 +2573,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 67548,
       "medianDebt": 25000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Psychology"
+      ]
     },
     {
       "id": 193900,
@@ -2157,7 +2602,12 @@
       "roomBoard": 23530,
       "medianEarnings10yr": 82509,
       "medianDebt": 20500,
-      "satAverage": 1520
+      "satAverage": 1520,
+      "topMajors": [
+        "Visual & Performing Arts",
+        "Social Sciences",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 199102,
@@ -2181,7 +2631,12 @@
       "roomBoard": 8832,
       "medianEarnings10yr": 44440,
       "medianDebt": 27000,
-      "satAverage": 1074
+      "satAverage": 1074,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 199193,
@@ -2205,7 +2660,12 @@
       "roomBoard": 14332,
       "medianEarnings10yr": 68758,
       "medianDebt": 20121,
-      "satAverage": 1376
+      "satAverage": 1376,
+      "topMajors": [
+        "Engineering",
+        "Business & Marketing",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 167358,
@@ -2229,7 +2689,12 @@
       "roomBoard": 19580,
       "medianEarnings10yr": 92538,
       "medianDebt": 24250,
-      "satAverage": 1497
+      "satAverage": 1497,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Engineering"
+      ]
     },
     {
       "id": 105330,
@@ -2253,7 +2718,12 @@
       "roomBoard": 14432,
       "medianEarnings10yr": 54384,
       "medianDebt": 19000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Psychology"
+      ]
     },
     {
       "id": 147767,
@@ -2277,7 +2747,12 @@
       "roomBoard": 21126,
       "medianEarnings10yr": 89363,
       "medianDebt": 15000,
-      "satAverage": 1533
+      "satAverage": 1533,
+      "topMajors": [
+        "Social Sciences",
+        "Communication",
+        "Engineering"
+      ]
     },
     {
       "id": 204796,
@@ -2301,7 +2776,12 @@
       "roomBoard": 14738,
       "medianEarnings10yr": 60409,
       "medianDebt": 19976,
-      "satAverage": 1387
+      "satAverage": 1387,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Health Professions"
+      ]
     },
     {
       "id": 204857,
@@ -2325,7 +2805,12 @@
       "roomBoard": 14162,
       "medianEarnings10yr": 52581,
       "medianDebt": 21056,
-      "satAverage": 1212
+      "satAverage": 1212,
+      "topMajors": [
+        "Health Professions",
+        "Business & Marketing",
+        "Communication"
+      ]
     },
     {
       "id": 207388,
@@ -2349,7 +2834,12 @@
       "roomBoard": 11230,
       "medianEarnings10yr": 57413,
       "medianDebt": 20500,
-      "satAverage": 1150
+      "satAverage": 1150,
+      "topMajors": [
+        "Business & Marketing",
+        "Agriculture",
+        "Engineering"
+      ]
     },
     {
       "id": 209542,
@@ -2373,7 +2863,12 @@
       "roomBoard": 16386,
       "medianEarnings10yr": 64010,
       "medianDebt": 21221,
-      "satAverage": 1290
+      "satAverage": 1290,
+      "topMajors": [
+        "Computer & Information Sciences",
+        "Engineering",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 214777,
@@ -2397,7 +2892,12 @@
       "roomBoard": 14474,
       "medianEarnings10yr": 63435,
       "medianDebt": 25000,
-      "satAverage": 1337
+      "satAverage": 1337,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 186131,
@@ -2421,7 +2921,12 @@
       "roomBoard": 20250,
       "medianEarnings10yr": 110066,
       "medianDebt": 10320,
-      "satAverage": 1553
+      "satAverage": 1553,
+      "topMajors": [
+        "Social Sciences",
+        "Engineering",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 217402,
@@ -2445,7 +2950,12 @@
       "roomBoard": 17840,
       "medianEarnings10yr": 87054,
       "medianDebt": 27000,
-      "satAverage": 1346
+      "satAverage": 1346,
+      "topMajors": [
+        "Business & Marketing",
+        "Social Sciences",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 243780,
@@ -2469,7 +2979,12 @@
       "roomBoard": 12820,
       "medianEarnings10yr": 72424,
       "medianDebt": 19500,
-      "satAverage": 1364
+      "satAverage": 1364,
+      "topMajors": [
+        "Engineering",
+        "Business & Marketing",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 231651,
@@ -2493,7 +3008,12 @@
       "roomBoard": 8010,
       "medianEarnings10yr": 44498,
       "medianDebt": 24534,
-      "satAverage": 1153
+      "satAverage": 1153,
+      "topMajors": [
+        "Business & Marketing",
+        "Psychology",
+        "Theology & Religious Vocations"
+      ]
     },
     {
       "id": 227757,
@@ -2517,7 +3037,12 @@
       "roomBoard": 18100,
       "medianEarnings10yr": 89718,
       "medianDebt": 11000,
-      "satAverage": 1553
+      "satAverage": 1553,
+      "topMajors": [
+        "Biological & Biomedical Sciences",
+        "Engineering",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 186380,
@@ -2541,7 +3066,12 @@
       "roomBoard": 15714,
       "medianEarnings10yr": 74479,
       "medianDebt": 21500,
-      "satAverage": 1410
+      "satAverage": 1410,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Health Professions"
+      ]
     },
     {
       "id": 122409,
@@ -2565,7 +3095,12 @@
       "roomBoard": 23030,
       "medianEarnings10yr": 64909,
       "medianDebt": 15000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Psychology",
+        "Social Sciences"
+      ]
     },
     {
       "id": 122597,
@@ -2589,7 +3124,12 @@
       "roomBoard": 22266,
       "medianEarnings10yr": 68077,
       "medianDebt": 15371,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Visual & Performing Arts",
+        "Psychology"
+      ]
     },
     {
       "id": 122755,
@@ -2613,7 +3153,12 @@
       "roomBoard": 20971,
       "medianEarnings10yr": 78988,
       "medianDebt": 15000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Psychology"
+      ]
     },
     {
       "id": 122931,
@@ -2637,7 +3182,12 @@
       "roomBoard": 19893,
       "medianEarnings10yr": 109183,
       "medianDebt": 19162,
-      "satAverage": 1426
+      "satAverage": 1426,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Social Sciences"
+      ]
     },
     {
       "id": 137564,
@@ -2661,7 +3211,12 @@
       "roomBoard": 11130,
       "medianEarnings10yr": 46744,
       "medianDebt": 21500,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Theology & Religious Vocations",
+        "Business & Marketing",
+        "Liberal Arts & Humanities"
+      ]
     },
     {
       "id": 183026,
@@ -2685,7 +3240,12 @@
       "roomBoard": 12800,
       "medianEarnings10yr": 50318,
       "medianDebt": 21082,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Psychology"
+      ]
     },
     {
       "id": 160621,
@@ -2709,7 +3269,12 @@
       "roomBoard": 8018,
       "medianEarnings10yr": 43371,
       "medianDebt": 29251,
-      "satAverage": 942
+      "satAverage": 942,
+      "topMajors": [
+        "Health Professions",
+        "Security & Law Enforcement",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 141060,
@@ -2733,7 +3298,12 @@
       "roomBoard": 18091,
       "medianEarnings10yr": 59993,
       "medianDebt": 25000,
-      "satAverage": 1220
+      "satAverage": 1220,
+      "topMajors": [
+        "Business & Marketing",
+        "Social Sciences",
+        "Psychology"
+      ]
     },
     {
       "id": 174844,
@@ -2757,7 +3327,12 @@
       "roomBoard": 13630,
       "medianEarnings10yr": 65543,
       "medianDebt": 26000,
-      "satAverage": 1380
+      "satAverage": 1380,
+      "topMajors": [
+        "Social Sciences",
+        "Biological & Biomedical Sciences",
+        "Physical Sciences"
+      ]
     },
     {
       "id": 243744,
@@ -2781,7 +3356,12 @@
       "roomBoard": 21315,
       "medianEarnings10yr": 124080,
       "medianDebt": 12000,
-      "satAverage": 1553
+      "satAverage": 1553,
+      "topMajors": [
+        "Computer & Information Sciences",
+        "Multi/Interdisciplinary Studies",
+        "Social Sciences"
+      ]
     },
     {
       "id": 196149,
@@ -2805,7 +3385,12 @@
       "roomBoard": 15560,
       "medianEarnings10yr": 60236,
       "medianDebt": 21500,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Education",
+        "Parks, Recreation & Fitness Studies",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 186867,
@@ -2829,7 +3414,12 @@
       "roomBoard": 19124,
       "medianEarnings10yr": 108772,
       "medianDebt": 27000,
-      "satAverage": 1446
+      "satAverage": 1446,
+      "topMajors": [
+        "Engineering",
+        "Computer & Information Sciences",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 196097,
@@ -2853,7 +3443,12 @@
       "roomBoard": 18196,
       "medianEarnings10yr": 74502,
       "medianDebt": 18228,
-      "satAverage": 1419
+      "satAverage": 1419,
+      "topMajors": [
+        "Health Professions",
+        "Biological & Biomedical Sciences",
+        "Psychology"
+      ]
     },
     {
       "id": 196413,
@@ -2877,7 +3472,12 @@
       "roomBoard": 19188,
       "medianEarnings10yr": 79164,
       "medianDebt": 26000,
-      "satAverage": 1375
+      "satAverage": 1375,
+      "topMajors": [
+        "Social Sciences",
+        "Communication",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 216339,
@@ -2901,7 +3501,12 @@
       "roomBoard": 17690,
       "medianEarnings10yr": 63727,
       "medianDebt": 24395,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Communication"
+      ]
     },
     {
       "id": 226152,
@@ -2925,7 +3530,12 @@
       "roomBoard": 10826,
       "medianEarnings10yr": 48386,
       "medianDebt": 15000,
-      "satAverage": 993
+      "satAverage": 993,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Security & Law Enforcement"
+      ]
     },
     {
       "id": 228723,
@@ -2949,7 +3559,12 @@
       "roomBoard": 13008,
       "medianEarnings10yr": 72097,
       "medianDebt": 17804,
-      "satAverage": 1280
+      "satAverage": 1280,
+      "topMajors": [
+        "Engineering",
+        "Business & Marketing",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 228875,
@@ -2973,7 +3588,12 @@
       "roomBoard": 16700,
       "medianEarnings10yr": 68424,
       "medianDebt": 21500,
-      "satAverage": 1298
+      "satAverage": 1298,
+      "topMajors": [
+        "Business & Marketing",
+        "Communication",
+        "Health Professions"
+      ]
     },
     {
       "id": 228459,
@@ -2997,7 +3617,12 @@
       "roomBoard": 12630,
       "medianEarnings10yr": 56906,
       "medianDebt": 21000,
-      "satAverage": 1103
+      "satAverage": 1103,
+      "topMajors": [
+        "Business & Marketing",
+        "Communication",
+        "Visual & Performing Arts"
+      ]
     },
     {
       "id": 229115,
@@ -3021,7 +3646,12 @@
       "roomBoard": 10742,
       "medianEarnings10yr": 62454,
       "medianDebt": 21500,
-      "satAverage": 1190
+      "satAverage": 1190,
+      "topMajors": [
+        "Business & Marketing",
+        "Communication",
+        "Engineering"
+      ]
     },
     {
       "id": 100751,
@@ -3045,7 +3675,12 @@
       "roomBoard": 15016,
       "medianEarnings10yr": 59221,
       "medianDebt": 22750,
-      "satAverage": 1285
+      "satAverage": 1285,
+      "topMajors": [
+        "Business & Marketing",
+        "Communication",
+        "Social Sciences"
+      ]
     },
     {
       "id": 137847,
@@ -3069,7 +3704,12 @@
       "roomBoard": 14612,
       "medianEarnings10yr": 59436,
       "medianDebt": 24211,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Social Sciences"
+      ]
     },
     {
       "id": 221759,
@@ -3093,7 +3733,12 @@
       "roomBoard": 13356,
       "medianEarnings10yr": 60249,
       "medianDebt": 20500,
-      "satAverage": 1311
+      "satAverage": 1311,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Parks, Recreation & Fitness Studies"
+      ]
     },
     {
       "id": 228769,
@@ -3117,7 +3762,12 @@
       "roomBoard": 11228,
       "medianEarnings10yr": 63199,
       "medianDebt": 17527,
-      "satAverage": 1124
+      "satAverage": 1124,
+      "topMajors": [
+        "Health Professions",
+        "Business & Marketing",
+        "Engineering"
+      ]
     },
     {
       "id": 228778,
@@ -3141,7 +3791,12 @@
       "roomBoard": 14828,
       "medianEarnings10yr": 75121,
       "medianDebt": 20500,
-      "satAverage": 1395
+      "satAverage": 1395,
+      "topMajors": [
+        "Multi/Interdisciplinary Studies",
+        "Engineering",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 228787,
@@ -3165,7 +3820,12 @@
       "roomBoard": 14430,
       "medianEarnings10yr": 68227,
       "medianDebt": 18000,
-      "satAverage": 1286
+      "satAverage": 1286,
+      "topMajors": [
+        "Computer & Information Sciences",
+        "Business & Marketing",
+        "Engineering"
+      ]
     },
     {
       "id": 228796,
@@ -3189,7 +3849,12 @@
       "roomBoard": 10864,
       "medianEarnings10yr": 50923,
       "medianDebt": 18000,
-      "satAverage": 962
+      "satAverage": 962,
+      "topMajors": [
+        "Health Professions",
+        "Business & Marketing",
+        "Engineering"
+      ]
     },
     {
       "id": 229027,
@@ -3213,7 +3878,12 @@
       "roomBoard": 14912,
       "medianEarnings10yr": 57131,
       "medianDebt": 20500,
-      "satAverage": 1105
+      "satAverage": 1105,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Psychology"
+      ]
     },
     {
       "id": 227368,
@@ -3237,7 +3907,12 @@
       "roomBoard": 9728,
       "medianEarnings10yr": 49620,
       "medianDebt": 12950,
-      "satAverage": 985
+      "satAverage": 985,
+      "topMajors": [
+        "Biological & Biomedical Sciences",
+        "Business & Marketing",
+        "Health Professions"
+      ]
     },
     {
       "id": 168148,
@@ -3261,7 +3936,12 @@
       "roomBoard": 18588,
       "medianEarnings10yr": 83214,
       "medianDebt": 16250,
-      "satAverage": 1513
+      "satAverage": 1513,
+      "topMajors": [
+        "Social Sciences",
+        "Engineering",
+        "Multi/Interdisciplinary Studies"
+      ]
     },
     {
       "id": 160755,
@@ -3285,7 +3965,12 @@
       "roomBoard": 18868,
       "medianEarnings10yr": 63268,
       "medianDebt": 20500,
-      "satAverage": 1448
+      "satAverage": 1448,
+      "topMajors": [
+        "Business & Marketing",
+        "Social Sciences",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 161572,
@@ -3309,7 +3994,12 @@
       "roomBoard": 12800,
       "medianEarnings10yr": 37852,
       "medianDebt": 25000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Natural Resources & Conservation",
+        "Agriculture",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 243601,
@@ -3331,7 +4021,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 26223,
       "medianDebt": 13448,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Health Professions",
+        "Agriculture",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 243443,
@@ -3355,7 +4050,12 @@
       "roomBoard": 9300,
       "medianEarnings10yr": 31754,
       "medianDebt": 16250,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Health Professions",
+        "Communication",
+        "Visual & Performing Arts"
+      ]
     },
     {
       "id": 196088,
@@ -3379,7 +4079,12 @@
       "roomBoard": 17426,
       "medianEarnings10yr": 70814,
       "medianDebt": 19000,
-      "satAverage": 1295
+      "satAverage": 1295,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Social Sciences"
+      ]
     },
     {
       "id": 200800,
@@ -3403,7 +4108,12 @@
       "roomBoard": 11904,
       "medianEarnings10yr": 46600,
       "medianDebt": 23250,
-      "satAverage": 1081
+      "satAverage": 1081,
+      "topMajors": [
+        "Engineering",
+        "Business & Marketing",
+        "Health Professions"
+      ]
     },
     {
       "id": 102553,
@@ -3427,7 +4137,12 @@
       "roomBoard": 14216,
       "medianEarnings10yr": 51871,
       "medianDebt": 20210,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Health Professions",
+        "Liberal Arts & Humanities",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 104179,
@@ -3451,7 +4166,12 @@
       "roomBoard": 16746,
       "medianEarnings10yr": 59979,
       "medianDebt": 19620,
-      "satAverage": 1246
+      "satAverage": 1246,
+      "topMajors": [
+        "Business & Marketing",
+        "Biological & Biomedical Sciences",
+        "Health Professions"
+      ]
     },
     {
       "id": 106397,
@@ -3475,7 +4195,12 @@
       "roomBoard": 14244,
       "medianEarnings10yr": 58191,
       "medianDebt": 21500,
-      "satAverage": 1169
+      "satAverage": 1169,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Engineering"
+      ]
     },
     {
       "id": 106245,
@@ -3499,7 +4224,12 @@
       "roomBoard": 10760,
       "medianEarnings10yr": 45265,
       "medianDebt": 22000,
-      "satAverage": 1049
+      "satAverage": 1049,
+      "topMajors": [
+        "Health Professions",
+        "Business & Marketing",
+        "Security & Law Enforcement"
+      ]
     },
     {
       "id": 110635,
@@ -3523,7 +4253,12 @@
       "roomBoard": 23750,
       "medianEarnings10yr": 92446,
       "medianDebt": 13000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Computer & Information Sciences",
+        "Social Sciences",
+        "Engineering"
+      ]
     },
     {
       "id": 110644,
@@ -3547,7 +4282,12 @@
       "roomBoard": 19426,
       "medianEarnings10yr": 80838,
       "medianDebt": 13000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Biological & Biomedical Sciences",
+        "Social Sciences",
+        "Psychology"
+      ]
     },
     {
       "id": 110653,
@@ -3571,7 +4311,12 @@
       "roomBoard": 18991,
       "medianEarnings10yr": 80735,
       "medianDebt": 15000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Social Sciences",
+        "Biological & Biomedical Sciences",
+        "Psychology"
+      ]
     },
     {
       "id": 110662,
@@ -3595,7 +4340,12 @@
       "roomBoard": 18369,
       "medianEarnings10yr": 82511,
       "medianDebt": 14000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Social Sciences",
+        "Biological & Biomedical Sciences",
+        "Psychology"
+      ]
     },
     {
       "id": 110671,
@@ -3619,7 +4369,12 @@
       "roomBoard": 20691,
       "medianEarnings10yr": 67699,
       "medianDebt": 17500,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Biological & Biomedical Sciences",
+        "Social Sciences",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 110680,
@@ -3643,7 +4398,12 @@
       "roomBoard": 18970,
       "medianEarnings10yr": 84943,
       "medianDebt": 15500,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Biological & Biomedical Sciences",
+        "Multi/Interdisciplinary Studies",
+        "Engineering"
+      ]
     },
     {
       "id": 110705,
@@ -3667,7 +4427,12 @@
       "roomBoard": 20279,
       "medianEarnings10yr": 74915,
       "medianDebt": 13993,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Social Sciences",
+        "Psychology",
+        "Mathematics & Statistics"
+      ]
     },
     {
       "id": 132903,
@@ -3691,7 +4456,12 @@
       "roomBoard": 12452,
       "medianEarnings10yr": 58308,
       "medianDebt": 18190,
-      "satAverage": 1269
+      "satAverage": 1269,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Psychology"
+      ]
     },
     {
       "id": 144050,
@@ -3715,7 +4485,12 @@
       "roomBoard": 20109,
       "medianEarnings10yr": 91885,
       "medianDebt": 15000,
-      "satAverage": 1554
+      "satAverage": 1554,
+      "topMajors": [
+        "Social Sciences",
+        "Mathematics & Statistics",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 201885,
@@ -3739,7 +4514,12 @@
       "roomBoard": 13564,
       "medianEarnings10yr": 54810,
       "medianDebt": 21250,
-      "satAverage": 1282
+      "satAverage": 1282,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Engineering"
+      ]
     },
     {
       "id": 126614,
@@ -3763,7 +4543,12 @@
       "roomBoard": 18468,
       "medianEarnings10yr": 69738,
       "medianDebt": 19500,
-      "satAverage": 1357
+      "satAverage": 1357,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 129020,
@@ -3787,7 +4572,12 @@
       "roomBoard": 14380,
       "medianEarnings10yr": 73997,
       "medianDebt": 21500,
-      "satAverage": 1348
+      "satAverage": 1348,
+      "topMajors": [
+        "Social Sciences",
+        "Health Professions",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 130943,
@@ -3811,7 +4601,12 @@
       "roomBoard": 15386,
       "medianEarnings10yr": 72950,
       "medianDebt": 24572,
-      "satAverage": 1292
+      "satAverage": 1292,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Engineering"
+      ]
     },
     {
       "id": 134130,
@@ -3835,7 +4630,12 @@
       "roomBoard": 12120,
       "medianEarnings10yr": 71588,
       "medianDebt": 15000,
-      "satAverage": 1403
+      "satAverage": 1403,
+      "topMajors": [
+        "Engineering",
+        "Business & Marketing",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 139959,
@@ -3859,7 +4659,12 @@
       "roomBoard": 11672,
       "medianEarnings10yr": 68726,
       "medianDebt": 18500,
-      "satAverage": 1397
+      "satAverage": 1397,
+      "topMajors": [
+        "Business & Marketing",
+        "Biological & Biomedical Sciences",
+        "Communication"
+      ]
     },
     {
       "id": 225511,
@@ -3883,7 +4688,12 @@
       "roomBoard": 11286,
       "medianEarnings10yr": 62377,
       "medianDebt": 18194,
-      "satAverage": 1250
+      "satAverage": 1250,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Psychology"
+      ]
     },
     {
       "id": 145600,
@@ -3907,7 +4717,12 @@
       "roomBoard": 16500,
       "medianEarnings10yr": 68740,
       "medianDebt": 16704,
-      "satAverage": 1250
+      "satAverage": 1250,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 145637,
@@ -3931,7 +4746,12 @@
       "roomBoard": 14522,
       "medianEarnings10yr": 81054,
       "medianDebt": 19500,
-      "satAverage": 1440
+      "satAverage": 1440,
+      "topMajors": [
+        "Engineering",
+        "Computer & Information Sciences",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 153658,
@@ -3955,7 +4775,12 @@
       "roomBoard": 12920,
       "medianEarnings10yr": 64762,
       "medianDebt": 22500,
-      "satAverage": 1200
+      "satAverage": 1200,
+      "topMajors": [
+        "Business & Marketing",
+        "Parks, Recreation & Fitness Studies",
+        "Multi/Interdisciplinary Studies"
+      ]
     },
     {
       "id": 155317,
@@ -3979,7 +4804,12 @@
       "roomBoard": 11358,
       "medianEarnings10yr": 61945,
       "medianDebt": 21000,
-      "satAverage": 1190
+      "satAverage": 1190,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Engineering"
+      ]
     },
     {
       "id": 157085,
@@ -4003,7 +4833,12 @@
       "roomBoard": 16016,
       "medianEarnings10yr": 59025,
       "medianDebt": 22500,
-      "satAverage": 1215
+      "satAverage": 1215,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Engineering"
+      ]
     },
     {
       "id": 163204,
@@ -4025,7 +4860,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 65287,
       "medianDebt": 21000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Liberal Arts & Humanities"
+      ]
     },
     {
       "id": 163286,
@@ -4049,7 +4889,12 @@
       "roomBoard": 15958,
       "medianEarnings10yr": 82860,
       "medianDebt": 19000,
-      "satAverage": 1473
+      "satAverage": 1473,
+      "topMajors": [
+        "Computer & Information Sciences",
+        "Business & Marketing",
+        "Social Sciences"
+      ]
     },
     {
       "id": 166629,
@@ -4073,7 +4918,12 @@
       "roomBoard": 16710,
       "medianEarnings10yr": 71631,
       "medianDebt": 22763,
-      "satAverage": 1423
+      "satAverage": 1423,
+      "topMajors": [
+        "Business & Marketing",
+        "Biological & Biomedical Sciences",
+        "Social Sciences"
+      ]
     },
     {
       "id": 135726,
@@ -4097,7 +4947,12 @@
       "roomBoard": 23790,
       "medianEarnings10yr": 75328,
       "medianDebt": 17500,
-      "satAverage": 1415
+      "satAverage": 1415,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 170976,
@@ -4121,7 +4976,12 @@
       "roomBoard": 15328,
       "medianEarnings10yr": 83648,
       "medianDebt": 19500,
-      "satAverage": 1465
+      "satAverage": 1465,
+      "topMajors": [
+        "Computer & Information Sciences",
+        "Engineering",
+        "Social Sciences"
+      ]
     },
     {
       "id": 171137,
@@ -4145,7 +5005,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 59649,
       "medianDebt": 22500,
-      "satAverage": 1115
+      "satAverage": 1115,
+      "topMajors": [
+        "Engineering",
+        "Computer & Information Sciences",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 174066,
@@ -4169,7 +5034,12 @@
       "roomBoard": 13856,
       "medianEarnings10yr": 69020,
       "medianDebt": 19500,
-      "satAverage": 1362
+      "satAverage": 1362,
+      "topMajors": [
+        "Biological & Biomedical Sciences",
+        "Business & Marketing",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 176017,
@@ -4193,7 +5063,12 @@
       "roomBoard": 12600,
       "medianEarnings10yr": 50994,
       "medianDebt": 20000,
-      "satAverage": 1184
+      "satAverage": 1184,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Communication"
+      ]
     },
     {
       "id": 178396,
@@ -4217,7 +5092,12 @@
       "roomBoard": 13700,
       "medianEarnings10yr": 63403,
       "medianDebt": 20500,
-      "satAverage": 1247
+      "satAverage": 1247,
+      "topMajors": [
+        "Business & Marketing",
+        "Area, Ethnic, Cultural & Gender Studies",
+        "Health Professions"
+      ]
     },
     {
       "id": 181464,
@@ -4241,7 +5121,12 @@
       "roomBoard": 14120,
       "medianEarnings10yr": 56887,
       "medianDebt": 21000,
-      "satAverage": 1191
+      "satAverage": 1191,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Family & Consumer Sciences"
+      ]
     },
     {
       "id": 182281,
@@ -4265,7 +5150,12 @@
       "roomBoard": 12628,
       "medianEarnings10yr": 55037,
       "medianDebt": 19450,
-      "satAverage": 1094
+      "satAverage": 1094,
+      "topMajors": [
+        "Business & Marketing",
+        "Education",
+        "Psychology"
+      ]
     },
     {
       "id": 199120,
@@ -4289,7 +5179,12 @@
       "roomBoard": 13804,
       "medianEarnings10yr": 72200,
       "medianDebt": 14000,
-      "satAverage": 1439
+      "satAverage": 1439,
+      "topMajors": [
+        "Biological & Biomedical Sciences",
+        "Social Sciences",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 199139,
@@ -4313,7 +5208,12 @@
       "roomBoard": 14458,
       "medianEarnings10yr": 57289,
       "medianDebt": 21500,
-      "satAverage": 1231
+      "satAverage": 1231,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 136172,
@@ -4337,7 +5237,12 @@
       "roomBoard": 11810,
       "medianEarnings10yr": 56343,
       "medianDebt": 15531,
-      "satAverage": 1153
+      "satAverage": 1153,
+      "topMajors": [
+        "Health Professions",
+        "Business & Marketing",
+        "Psychology"
+      ]
     },
     {
       "id": 227216,
@@ -4361,7 +5266,12 @@
       "roomBoard": 11194,
       "medianEarnings10yr": 57010,
       "medianDebt": 19250,
-      "satAverage": 1109
+      "satAverage": 1109,
+      "topMajors": [
+        "Business & Marketing",
+        "Multi/Interdisciplinary Studies",
+        "Visual & Performing Arts"
+      ]
     },
     {
       "id": 152080,
@@ -4385,7 +5295,12 @@
       "roomBoard": 17900,
       "medianEarnings10yr": 99980,
       "medianDebt": 19000,
-      "satAverage": 1520
+      "satAverage": 1520,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Social Sciences"
+      ]
     },
     {
       "id": 207500,
@@ -4409,7 +5324,12 @@
       "roomBoard": 13630,
       "medianEarnings10yr": 63126,
       "medianDebt": 20654,
-      "satAverage": 1246
+      "satAverage": 1246,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Communication"
+      ]
     },
     {
       "id": 209551,
@@ -4433,7 +5353,12 @@
       "roomBoard": 16611,
       "medianEarnings10yr": 61324,
       "medianDebt": 20139,
-      "satAverage": 1272
+      "satAverage": 1272,
+      "topMajors": [
+        "Business & Marketing",
+        "Social Sciences",
+        "Communication"
+      ]
     },
     {
       "id": 215062,
@@ -4457,7 +5382,12 @@
       "roomBoard": 19174,
       "medianEarnings10yr": 111371,
       "medianDebt": 15715,
-      "satAverage": 1553
+      "satAverage": 1553,
+      "topMajors": [
+        "Multi/Interdisciplinary Studies",
+        "Social Sciences",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 215293,
@@ -4481,7 +5411,12 @@
       "roomBoard": 13620,
       "medianEarnings10yr": 66125,
       "medianDebt": 24250,
-      "satAverage": 1370
+      "satAverage": 1370,
+      "topMajors": [
+        "Health Professions",
+        "Multi/Interdisciplinary Studies",
+        "Engineering"
+      ]
     },
     {
       "id": 243197,
@@ -4505,7 +5440,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 48992,
       "medianDebt": 8250,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Engineering",
+        "Biological & Biomedical Sciences",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 243221,
@@ -4529,7 +5469,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 35723,
       "medianDebt": 5500,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Biological & Biomedical Sciences",
+        "Psychology"
+      ]
     },
     {
       "id": 195030,
@@ -4553,7 +5498,12 @@
       "roomBoard": 19792,
       "medianEarnings10yr": 79042,
       "medianDebt": 21000,
-      "satAverage": 1488
+      "satAverage": 1488,
+      "topMajors": [
+        "Biological & Biomedical Sciences",
+        "Health Professions",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 122436,
@@ -4577,7 +5527,12 @@
       "roomBoard": 19918,
       "medianEarnings10yr": 86522,
       "medianDebt": 22940,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Biological & Biomedical Sciences",
+        "Social Sciences"
+      ]
     },
     {
       "id": 218663,
@@ -4601,7 +5556,12 @@
       "roomBoard": 13534,
       "medianEarnings10yr": 62177,
       "medianDebt": 21500,
-      "satAverage": 1297
+      "satAverage": 1297,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 137351,
@@ -4625,7 +5585,12 @@
       "roomBoard": 14440,
       "medianEarnings10yr": 57743,
       "medianDebt": 17988,
-      "satAverage": 1227
+      "satAverage": 1227,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 123961,
@@ -4649,7 +5614,12 @@
       "roomBoard": 19931,
       "medianEarnings10yr": 92498,
       "medianDebt": 18000,
-      "satAverage": 1495
+      "satAverage": 1495,
+      "topMajors": [
+        "Business & Marketing",
+        "Social Sciences",
+        "Visual & Performing Arts"
+      ]
     },
     {
       "id": 230764,
@@ -4673,7 +5643,12 @@
       "roomBoard": 13315,
       "medianEarnings10yr": 67170,
       "medianDebt": 19000,
-      "satAverage": 1257
+      "satAverage": 1257,
+      "topMajors": [
+        "Business & Marketing",
+        "Social Sciences",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 234076,
@@ -4697,7 +5672,12 @@
       "roomBoard": 14800,
       "medianEarnings10yr": 86863,
       "medianDebt": 17500,
-      "satAverage": 1480
+      "satAverage": 1480,
+      "topMajors": [
+        "Social Sciences",
+        "Computer & Information Sciences",
+        "Liberal Arts & Humanities"
+      ]
     },
     {
       "id": 236948,
@@ -4721,7 +5701,12 @@
       "roomBoard": 18405,
       "medianEarnings10yr": 78466,
       "medianDebt": 14615,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Computer & Information Sciences",
+        "Biological & Biomedical Sciences",
+        "Engineering"
+      ]
     },
     {
       "id": 138354,
@@ -4745,7 +5730,12 @@
       "roomBoard": 12432,
       "medianEarnings10yr": 49137,
       "medianDebt": 16624,
-      "satAverage": 1138
+      "satAverage": 1138,
+      "topMajors": [
+        "Health Professions",
+        "Liberal Arts & Humanities",
+        "Business & Marketing"
+      ]
     },
     {
       "id": 141334,
@@ -4769,7 +5759,12 @@
       "roomBoard": 12782,
       "medianEarnings10yr": 49587,
       "medianDebt": 23970,
-      "satAverage": 1032
+      "satAverage": 1032,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Psychology"
+      ]
     },
     {
       "id": 240444,
@@ -4793,7 +5788,12 @@
       "roomBoard": 14124,
       "medianEarnings10yr": 73792,
       "medianDebt": 20484,
-      "satAverage": 1427
+      "satAverage": 1427,
+      "topMajors": [
+        "Business & Marketing",
+        "Social Sciences",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 230728,
@@ -4817,7 +5817,12 @@
       "roomBoard": 9076,
       "medianEarnings10yr": 54022,
       "medianDebt": 14340,
-      "satAverage": 1187
+      "satAverage": 1187,
+      "topMajors": [
+        "Liberal Arts & Humanities",
+        "Business & Marketing",
+        "Health Professions"
+      ]
     },
     {
       "id": 221999,
@@ -4841,7 +5846,12 @@
       "roomBoard": 22054,
       "medianEarnings10yr": 91565,
       "medianDebt": 14000,
-      "satAverage": 1549
+      "satAverage": 1549,
+      "topMajors": [
+        "Social Sciences",
+        "Multi/Interdisciplinary Studies",
+        "Engineering"
+      ]
     },
     {
       "id": 216597,
@@ -4865,7 +5875,12 @@
       "roomBoard": 17694,
       "medianEarnings10yr": 100423,
       "medianDebt": 25874,
-      "satAverage": 1460
+      "satAverage": 1460,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Social Sciences"
+      ]
     },
     {
       "id": 234030,
@@ -4889,7 +5904,12 @@
       "roomBoard": 18254,
       "medianEarnings10yr": 58128,
       "medianDebt": 21500,
-      "satAverage": 1137
+      "satAverage": 1137,
+      "topMajors": [
+        "Visual & Performing Arts",
+        "Business & Marketing",
+        "Psychology"
+      ]
     },
     {
       "id": 233921,
@@ -4913,7 +5933,12 @@
       "roomBoard": 16550,
       "medianEarnings10yr": 81698,
       "medianDebt": 21500,
-      "satAverage": 1364
+      "satAverage": 1364,
+      "topMajors": [
+        "Business & Marketing",
+        "Engineering",
+        "Social Sciences"
+      ]
     },
     {
       "id": 199847,
@@ -4937,7 +5962,12 @@
       "roomBoard": 18494,
       "medianEarnings10yr": 78158,
       "medianDebt": 21500,
-      "satAverage": 1475
+      "satAverage": 1475,
+      "topMajors": [
+        "Business & Marketing",
+        "Social Sciences",
+        "Communication"
+      ]
     },
     {
       "id": 236939,
@@ -4961,7 +5991,12 @@
       "roomBoard": 13622,
       "medianEarnings10yr": 68905,
       "medianDebt": 19500,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Social Sciences",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 179867,
@@ -4985,7 +6020,12 @@
       "roomBoard": 21854,
       "medianEarnings10yr": 86182,
       "medianDebt": 17500,
-      "satAverage": 1530
+      "satAverage": 1530,
+      "topMajors": [
+        "Engineering",
+        "Biological & Biomedical Sciences",
+        "Social Sciences"
+      ]
     },
     {
       "id": 130697,
@@ -5009,7 +6049,12 @@
       "roomBoard": 19872,
       "medianEarnings10yr": 73897,
       "medianDebt": 17000,
-      "satAverage": 1501
+      "satAverage": 1501,
+      "topMajors": [
+        "Social Sciences",
+        "Psychology",
+        "Visual & Performing Arts"
+      ]
     },
     {
       "id": 433387,
@@ -5033,7 +6078,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 60615,
       "medianDebt": 11116,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Health Professions",
+        "Computer & Information Sciences"
+      ]
     },
     {
       "id": 231624,
@@ -5057,7 +6107,12 @@
       "roomBoard": 16182,
       "medianEarnings10yr": 73490,
       "medianDebt": 18500,
-      "satAverage": 1473
+      "satAverage": 1473,
+      "topMajors": [
+        "Social Sciences",
+        "Business & Marketing",
+        "Biological & Biomedical Sciences"
+      ]
     },
     {
       "id": 131113,
@@ -5080,7 +6135,12 @@
       "roomBoard": null,
       "medianEarnings10yr": 53844,
       "medianDebt": 20000,
-      "satAverage": null
+      "satAverage": null,
+      "topMajors": [
+        "Business & Marketing",
+        "Computer & Information Sciences",
+        "Health Professions"
+      ]
     },
     {
       "id": 130794,
@@ -5104,7 +6164,12 @@
       "roomBoard": 19900,
       "medianEarnings10yr": 100533,
       "medianDebt": 12975,
-      "satAverage": 1534
+      "satAverage": 1534,
+      "topMajors": [
+        "Social Sciences",
+        "Biological & Biomedical Sciences",
+        "Multi/Interdisciplinary Studies"
+      ]
     }
   ]
 }

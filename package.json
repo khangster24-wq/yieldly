@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "data:colleges": "tsx scripts/fetch-colleges.ts"
+    "data:colleges": "tsx scripts/fetch-colleges.ts",
+    "data:majors": "tsx scripts/fetch-majors.ts"
   },
   "dependencies": {
     "@google/genai": "^2.13.0",

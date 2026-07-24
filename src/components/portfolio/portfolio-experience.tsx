@@ -10,9 +10,10 @@ import { DiversificationMeter } from "@/components/portfolio/diversification-met
 import { StatTiles } from "@/components/portfolio/stat-tiles";
 import { RiskReturnScatter } from "@/components/portfolio/risk-return-scatter";
 import { TierSections } from "@/components/portfolio/tier-sections";
+import { SuggestedSchools } from "@/components/portfolio/suggested-schools";
 import { scoreCollege } from "@/lib/scoring";
 import { summarizePortfolio } from "@/lib/portfolio";
-import { getPortfolio, getProfile, removeFromPortfolio } from "@/lib/storage";
+import { addToPortfolio, getPortfolio, getProfile, removeFromPortfolio } from "@/lib/storage";
 import { EMPTY_PROFILE, type College, type StudentProfile } from "@/lib/types";
 
 /**
@@ -39,6 +40,7 @@ export function PortfolioExperience() {
   const summary = useMemo(() => summarizePortfolio(scored), [scored]);
 
   const handleRemove = (id: number) => setSaved(removeFromPortfolio(id));
+  const handleAdd = (college: College) => setSaved(addToPortfolio(college));
 
   return (
     <div className="flex flex-1 flex-col">
@@ -52,7 +54,10 @@ export function PortfolioExperience() {
       {/* Body only renders after mount (reads localStorage) — avoids hydration mismatch. */}
       {mounted &&
         (saved.length === 0 ? (
-          <EmptyPortfolio />
+          <div className="flex flex-1 flex-col gap-4">
+            <SuggestedSchools saved={saved} profile={profile} onAdd={handleAdd} />
+            <EmptyPortfolio />
+          </div>
         ) : (
           <motion.div
             initial={{ opacity: 0, y: 8 }}
@@ -61,6 +66,7 @@ export function PortfolioExperience() {
             className="space-y-4"
           >
             <DiversificationMeter summary={summary} />
+            <SuggestedSchools saved={saved} profile={profile} onAdd={handleAdd} />
             <StatTiles summary={summary} />
             <RiskReturnScatter buckets={summary.buckets} />
             <TierSections buckets={summary.buckets} onRemove={handleRemove} />

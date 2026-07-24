@@ -47,6 +47,14 @@ export interface College {
   /** SAT/ACT context for stat-relative risk personalization (Phase 2). */
   satAverage: number | null; // `latest.admissions.sat_scores.average.overall`
   /**
+   * Top 3 fields of study by real share of bachelor's degrees awarded
+   * (`latest.academics.program_percentage.*`), human-readable labels only —
+   * e.g. ["Business & Marketing", "Engineering", "Computer Science"].
+   * US schools only (see scripts/fetch-majors.ts); undefined for
+   * international schools (no equivalent public per-institution dataset).
+   */
+  topMajors?: string[];
+  /**
    * Optional campus photo for the card banner. When absent (the default today),
    * the card falls back to the designed gradient monogram. Wired now so real
    * photos can drop in during the Phase 5 polish pass without rework.

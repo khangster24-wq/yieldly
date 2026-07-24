@@ -23,6 +23,10 @@ College Scorecard has two genuinely different cost numbers, and showing only one
 
 **Yieldly must show both, clearly labeled** — e.g. "Sticker price: $78,000/yr" and "Estimated net price for your income bracket: $19,400/yr" side by side, using the income bracket the student enters at onboarding to pick the right net-price figure. Never show a single unlabeled "cost" number — that's the exact bug to fix if the app is currently displaying one figure with no context, and it's also a better product: showing the gap between sticker and net price *is* the financial-literacy story this app is supposed to tell.
 
+### Top majors — `latest.academics.program_percentage.*`
+
+Scorecard also publishes each institution's real share of bachelor's degrees awarded per 2-digit CIP category (e.g. `business_marketing: 0.17` = 17% of degrees). `scripts/fetch-majors.ts` pulls this for every already-cached school id (batched `id__in` queries, doesn't touch which schools are in the cache) and keeps the top 3 non-zero categories as `College.topMajors`, human-labeled from the real NCES CIP series titles — not an editorial "notable programs" list. Shown on the Portfolio detail view only (see `docs/ROADMAP.md` Phase 2 for why it doesn't fit the Discover card's fixed-height layout). US schools only — no equivalent per-institution dataset exists for the international schools in `src/lib/international-colleges.ts`, so `topMajors` stays honestly absent for those rather than guessed.
+
 ## Scholarship data: curated seed dataset (MVP approach)
 
 There is no single clean, comprehensive, free scholarship API suitable for a student project (options like ScholarshipAPI, ScholarshipPortal, and ScholarshipOwl exist but are either regionally limited, require paid/partner access, or aren't built for this use case).

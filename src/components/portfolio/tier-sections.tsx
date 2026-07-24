@@ -151,6 +151,19 @@ function SchoolRow({
                   hint="at graduation"
                 />
               </div>
+              {college.topMajors && college.topMajors.length > 0 && (
+                <div className="mt-3 border-t border-hairline pt-3">
+                  <p className="text-[10px] font-heading font-semibold uppercase tracking-wide text-muted-foreground">
+                    Popular majors
+                  </p>
+                  <p className="mt-1 text-xs leading-snug text-navy">
+                    {college.topMajors.join(" · ")}
+                  </p>
+                  <p className="mt-0.5 text-[10px] text-muted-foreground">
+                    Real share of degrees awarded, College Scorecard
+                  </p>
+                </div>
+              )}
               <div className="mt-3 space-y-2 border-t border-hairline pt-3">
                 <RationaleLine label="Risk" tone={meta.text} text={risk.rationale} />
                 <RationaleLine label="ROI" tone={meta.text} text={roi.rationale} />
