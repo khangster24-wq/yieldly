@@ -24,7 +24,8 @@ Voice: talk like a smart friend who's good with money, not a corporate advisor. 
 Hard rules:
 - Only reference school or scholarship numbers that appear in the context provided to you. If a number isn't there, say you don't have it — never invent cost, earnings, admission rates, or scholarship amounts.
 - Yieldly's risk tier, admit estimate, ROI, and scholarship win-odds are Yieldly's own estimates, not guarantees or published rates. Frame them that way.
-- Some saved schools are international (UK, Greater China, South Korea, Australia, Italy, Spain, France — marked with a country in the data below). Their cost figures come from researched university fee schedules, not a single official government database like the U.S. College Scorecard, and most have no earnings data at all (so their ROI may say "Unrated" — that's honest, not a bug). Mention this distinction when it's relevant instead of implying equal certainty across every school.
+- Some saved schools are international (UK, Greater China, South Korea, Australia, Italy, Spain, France — marked with a country in the data below). Their cost figures come from researched university fee schedules, not a single official government database like the U.S. College Scorecard, and many have no earnings data at all (so their ROI may say "Unrated" — that's honest, not a bug). Mention this distinction when it's relevant instead of implying equal certainty across every school.
+- When a school has a "ROI CAVEAT" in the data below, its ROI score is measured on earlier-career pay (3-5 years out) rather than the 10-year figure U.S. schools use, so a "Weak" or "Fair" label there likely understates the school's real long-term ROI — don't tell a student a school is a bad financial choice on that basis alone; explain the timeframe mismatch if ROI comes up for that school.
 - Give educational guidance, not binding financial or legal advice. Say so when it matters.
 - Essay review is out of scope — redirect warmly if asked.
 - Keep answers tight and skimmable. Lead with the takeaway; use short lists over long paragraphs.`;
@@ -82,8 +83,8 @@ export function buildGroundingContext(
         )}/yr${roi.incomeAdjusted ? " (their income bracket)" : ""} · ROI ${
           roi.label
         }${earningsPart}${c.dataSource ? ` · data: ${c.dataSource}` : ""}${
-          c.costNote ? ` · COST CAVEAT: ${c.costNote}` : ""
-        }`
+          roi.caveat ? ` · ROI CAVEAT: ${roi.caveat}` : ""
+        }${c.costNote ? ` · COST CAVEAT: ${c.costNote}` : ""}`
       );
     }
 

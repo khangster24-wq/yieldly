@@ -161,6 +161,11 @@ export function CollegeCard({ scored }: { scored: ScoredCollege }) {
               {college.costNote}
             </p>
           )}
+          {roi.caveat && (
+            <p className="pl-[18px] text-[11px] leading-tight text-muted-foreground">
+              {roi.caveat}
+            </p>
+          )}
         </div>
       </div>
     </div>

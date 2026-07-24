@@ -150,6 +150,15 @@ export interface RoiAssessment {
   medianEarnings: number | null;
   medianDebt: number | null;
   rationale: string;
+  /**
+   * Set when the earnings figure behind this score comes from an
+   * earlier-career window than the US 10-year baseline (e.g. the UK's ~5-yr
+   * LEO data, Australia's ~3-yr QILT data) — the score likely runs lower than
+   * a same-scale US comparison would, since earlier-career pay is naturally
+   * lower than settled-career pay. Null when the earnings figure is already
+   * on the 10-year US basis (or the score is Unrated).
+   */
+  caveat: string | null;
 }
 
 /** A college enriched with Yieldly's derived (estimated) scores + display tags. */

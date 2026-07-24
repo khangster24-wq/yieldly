@@ -238,6 +238,7 @@ export function assessRoi(
       medianDebt,
       rationale:
         "Not enough cost or earnings data to rate ROI — showing the raw numbers only.",
+      caveat: null,
     };
   }
 
@@ -268,6 +269,16 @@ export function assessRoi(
     earnings / 1000
   )}k ${earningsPhrase} (≈${paybackYears.toFixed(1)}-yr payback).`;
 
+  // Every non-null earningsNote in this dataset (UK LEO ~5yr, Australia QILT
+  // ~3yr, France's 6mo/30mo surveys) is an earlier-career window than the US
+  // "10 years after entry" baseline this formula is calibrated around — flag
+  // it plainly so a low score doesn't read as "bad investment" when it's
+  // really "measured earlier in the career curve." See HS_GRAD_BASELINE's own
+  // comment above for the related (smaller) baseline-country caveat.
+  const caveat = college.earningsNote
+    ? `This score is based on earlier-career pay (${college.earningsNote}), not the 10-yr-out figure U.S. schools use — it likely runs lower than a same-scale U.S. comparison would.`
+    : null;
+
   return {
     score,
     label: ROI_LABELS[score - 1],
@@ -276,6 +287,7 @@ export function assessRoi(
     medianEarnings: earnings,
     medianDebt,
     rationale,
+    caveat,
   };
 }
 

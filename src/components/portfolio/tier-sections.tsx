@@ -154,6 +154,9 @@ function SchoolRow({
               <div className="mt-3 space-y-2 border-t border-hairline pt-3">
                 <RationaleLine label="Risk" tone={meta.text} text={risk.rationale} />
                 <RationaleLine label="ROI" tone={meta.text} text={roi.rationale} />
+                {roi.caveat && (
+                  <RationaleLine label="Note" tone={meta.text} text={roi.caveat} />
+                )}
                 {college.costNote && (
                   <RationaleLine label="Note" tone={meta.text} text={college.costNote} />
                 )}
