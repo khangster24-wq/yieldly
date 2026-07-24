@@ -28,7 +28,11 @@ function writeJSON(key: string, value: unknown) {
 }
 
 export function getProfile(): StudentProfile {
-  return readJSON<StudentProfile>(PROFILE_KEY, EMPTY_PROFILE);
+  // Merge over EMPTY_PROFILE, not just a missing-key fallback: a profile
+  // saved before a new field existed (e.g. apClasses/extracurriculars) is
+  // still valid JSON in localStorage, just missing those keys — without this
+  // merge, reading them (e.g. `.length`) on old profiles throws.
+  return { ...EMPTY_PROFILE, ...readJSON<Partial<StudentProfile>>(PROFILE_KEY, {}) };
 }
 
 export function saveProfile(profile: StudentProfile) {
