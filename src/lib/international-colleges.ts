@@ -9,21 +9,36 @@ import type { College } from "@/lib/types";
  *
  *   • United Kingdom — tuition from university-published international fee
  *     schedules; admission rates from official university admissions-statistics
- *     pages where published (Oxford, Cambridge, Imperial, LSE, UCL, KCL, Warwick,
- *     St Andrews); earnings from the UK government's LEO / Discover Uni dataset
- *     (median graduate earnings ~5 years post-grad — genuinely comparable to
- *     Scorecard's methodology, just a different window; see `earningsNote`).
+ *     pages where published; earnings from the UK government's LEO / Discover
+ *     Uni dataset, median ~5 years post-grad (see `earningsNote`). Important
+ *     caveat verified directly on discoveruni.gov.uk: Discover Uni publishes
+ *     figures per COURSE, not one whole-institution aggregate — there is no
+ *     "average UCL graduate" figure to pull. Every UK earnings figure in this
+ *     file (all 10 schools) uses Economics as the representative subject for
+ *     cross-school comparability, so read these as "a representative course at
+ *     this school," not a full-cohort average — real numbers, but narrower than
+ *     they might look next to Scorecard's true institution-wide figures.
  *   • Australia — tuition from university international fee schedules;
- *     admission rates from university-reported figures; earnings context from
- *     QILT (the Australian government's Graduate Outcomes Survey), though not
- *     mapped to a clean per-institution figure comparable to LEO, so left null.
- *   • Greater China, South Korea, Italy, Spain, France — tuition from
- *     university-published international/non-EU fee schedules; admission rates
- *     where a school publishes an actual international-applicant rate (several
- *     Chinese and Korean schools do); NO government earnings database exists in
- *     a comparable format, so `medianEarnings10yr` is honestly left null rather
- *     than estimated — those schools show an "Unrated" ROI, same as any U.S.
- *     school missing earnings data.
+ *     admission rates from university-reported figures; earnings ARE now real,
+ *     institution-wide figures from QILT's Graduate Outcomes Survey-Longitudinal
+ *     (median salary ~3 years post-grad, undergraduate), verified directly from
+ *     QILT's official 2025 National Report data tables (qilt.edu.au).
+ *   • France, Italy, Spain — real per-institution earnings surveys exist in
+ *     these countries (France: MESR "insertion professionnelle" + grande-école
+ *     self-reports; Italy: individual university career-service surveys;
+ *     Spain: government SIIU data), but coverage is inconsistent — some schools
+ *     publish a clean median salary, others only an employment rate (not a
+ *     salary — never substituted in) or nothing at all. Filled in where a real,
+ *     cited figure exists; left honestly null elsewhere rather than estimated.
+ *     See each school's `earningsNote` for its exact metric/timeframe — these
+ *     vary school to school (median vs. average, 6mo vs. 30mo vs. 5yr) more
+ *     than the US/UK/Australia data does, so the note matters more here.
+ *   • Greater China, South Korea — tuition from university-published
+ *     international/non-EU fee schedules; admission rates where a school
+ *     publishes an actual international-applicant rate; NO comparable
+ *     government earnings database exists, so `medianEarnings10yr` is honestly
+ *     left null — those schools show an "Unrated" ROI, same as any U.S. school
+ *     missing earnings data.
  *
  * Every `costOfAttendance` is tuition (converted to USD at approximate current
  * rates) plus a researched, city-appropriate annual living-cost estimate — the
@@ -44,7 +59,12 @@ const KR_SOURCE = "Uni-published international fees + reported international adm
 const AU_SOURCE = "Uni-published international fees + uni-reported admit rates + QILT context";
 const EU_SOURCE = "Uni-published international/non-EU fees + reported admit rates";
 
-const LEO_NOTE = "UK gov't (LEO), median ~5 yrs post-grad";
+const LEO_NOTE = "UK gov't (LEO/Discover Uni), median ~5 yrs post-grad, Economics course";
+const QILT_NOTE = "Australia gov't (QILT Graduate Outcomes Survey), median ~3 yrs post-grad";
+const SCIENCESPO_NOTE = "Sciences Po's own survey (France gov't methodology), average ~30 months post-grad, France-based grads only";
+const POLYTECHNIQUE_NOTE = "École Polytechnique's own survey, average ~6 months post-grad, France-based respondents only";
+const SORBONNE_NOTE = "France gov't (MESR), median ~30 months post-grad, Sciences/Tech/Health graduates only (2020 cohort)";
+const POLIMI_NOTE = "Politecnico di Milano's own graduate survey, median ~5 yrs post-grad";
 
 export const INTERNATIONAL_COLLEGES: College[] = [
   // ---------------------------------------------------------------- United Kingdom
@@ -52,16 +72,16 @@ export const INTERNATIONAL_COLLEGES: College[] = [
   { id: 900002, name: "University of Cambridge", city: "Cambridge", state: "United Kingdom", country: "United Kingdom", control: "public", size: 24000, sizeTier: "large", admissionRate: 0.164, costOfAttendance: 67200, netPrice: 67200, tuition: 50200, roomBoard: 17000, medianEarnings10yr: 57100, medianDebt: null, satAverage: null, earningsNote: LEO_NOTE, dataSource: UK_SOURCE, imageUrl: "/images/colleges/cambridge.jpg" },
   { id: 900003, name: "Imperial College London", city: "London", state: "United Kingdom", country: "United Kingdom", control: "public", size: 20000, sizeTier: "large", admissionRate: 0.10, costOfAttendance: 72200, netPrice: 72200, tuition: 52200, roomBoard: 20000, medianEarnings10yr: 71300, medianDebt: null, satAverage: null, earningsNote: LEO_NOTE, dataSource: UK_SOURCE, imageUrl: "/images/colleges/imperial.jpg" },
   { id: 900004, name: "London School of Economics", city: "London", state: "United Kingdom", country: "United Kingdom", control: "public", size: 12000, sizeTier: "medium", admissionRate: 0.16, costOfAttendance: 60100, netPrice: 60100, tuition: 40100, roomBoard: 20000, medianEarnings10yr: 73600, medianDebt: null, satAverage: null, earningsNote: LEO_NOTE, dataSource: UK_SOURCE, imageUrl: "/images/colleges/lse.jpg" },
-  { id: 900005, name: "University College London", city: "London", state: "United Kingdom", country: "United Kingdom", control: "public", size: 48000, sizeTier: "large", admissionRate: 0.167, costOfAttendance: 60100, netPrice: 60100, tuition: 40100, roomBoard: 20000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: UK_SOURCE, imageUrl: "/images/colleges/ucl.jpg" },
-  { id: 900006, name: "King's College London", city: "London", state: "United Kingdom", country: "United Kingdom", control: "public", size: 33000, sizeTier: "large", admissionRate: 0.13, costOfAttendance: 61500, netPrice: 61500, tuition: 41500, roomBoard: 20000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: UK_SOURCE, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/King%27s_College_London_Strand_Campus_Quadrangle_01.pdf/page1-960px-King%27s_College_London_Strand_Campus_Quadrangle_01.pdf.jpg" },
-  { id: 900007, name: "University of Edinburgh", city: "Edinburgh", state: "United Kingdom", country: "United Kingdom", control: "public", size: 35000, sizeTier: "large", admissionRate: 0.40, costOfAttendance: 52400, netPrice: 52400, tuition: 35400, roomBoard: 17000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: UK_SOURCE, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Edinburgh_Futures_Institute_exterior_tower.jpg/960px-Edinburgh_Futures_Institute_exterior_tower.jpg" },
+  { id: 900005, name: "University College London", city: "London", state: "United Kingdom", country: "United Kingdom", control: "public", size: 48000, sizeTier: "large", admissionRate: 0.167, costOfAttendance: 60100, netPrice: 60100, tuition: 40100, roomBoard: 20000, medianEarnings10yr: 85200, medianDebt: null, satAverage: null, earningsNote: LEO_NOTE, dataSource: UK_SOURCE, imageUrl: "/images/colleges/ucl.jpg" },
+  { id: 900006, name: "King's College London", city: "London", state: "United Kingdom", country: "United Kingdom", control: "public", size: 33000, sizeTier: "large", admissionRate: 0.13, costOfAttendance: 61500, netPrice: 61500, tuition: 41500, roomBoard: 20000, medianEarnings10yr: 63900, medianDebt: null, satAverage: null, earningsNote: LEO_NOTE, dataSource: UK_SOURCE, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/King%27s_College_London_Strand_Campus_Quadrangle_01.pdf/page1-960px-King%27s_College_London_Strand_Campus_Quadrangle_01.pdf.jpg" },
+  { id: 900007, name: "University of Edinburgh", city: "Edinburgh", state: "United Kingdom", country: "United Kingdom", control: "public", size: 35000, sizeTier: "large", admissionRate: 0.40, costOfAttendance: 52400, netPrice: 52400, tuition: 35400, roomBoard: 17000, medianEarnings10yr: 73900, medianDebt: null, satAverage: null, earningsNote: LEO_NOTE, dataSource: UK_SOURCE, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Edinburgh_Futures_Institute_exterior_tower.jpg/960px-Edinburgh_Futures_Institute_exterior_tower.jpg" },
   // Manchester doesn't publish one official overall rate; ~56-59% is the
   // consistently-cited estimate across admissions sources, used as the
   // midpoint here — note it varies a lot by course (e.g. Law ~7.7%, Medicine
   // far lower), so this is a broad-university figure, not per-program.
-  { id: 900008, name: "University of Manchester", city: "Manchester", state: "United Kingdom", country: "United Kingdom", control: "public", size: 44000, sizeTier: "large", admissionRate: 0.575, costOfAttendance: 48100, netPrice: 48100, tuition: 32100, roomBoard: 16000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: UK_SOURCE, imageUrl: "/images/colleges/manchester.jpg" },
-  { id: 900009, name: "University of Warwick", city: "Coventry", state: "United Kingdom", country: "United Kingdom", control: "public", size: 28000, sizeTier: "large", admissionRate: 0.14, costOfAttendance: 53400, netPrice: 53400, tuition: 37400, roomBoard: 16000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: UK_SOURCE, imageUrl: "/images/colleges/warwick.jpg" },
-  { id: 900010, name: "University of St Andrews", city: "St Andrews", state: "United Kingdom", country: "United Kingdom", control: "public", size: 10000, sizeTier: "medium", admissionRate: 0.08, costOfAttendance: 59500, netPrice: 59500, tuition: 44500, roomBoard: 15000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: UK_SOURCE, imageUrl: "/images/colleges/st-andrews.jpg" },
+  { id: 900008, name: "University of Manchester", city: "Manchester", state: "United Kingdom", country: "United Kingdom", control: "public", size: 44000, sizeTier: "large", admissionRate: 0.575, costOfAttendance: 48100, netPrice: 48100, tuition: 32100, roomBoard: 16000, medianEarnings10yr: 61300, medianDebt: null, satAverage: null, earningsNote: LEO_NOTE, dataSource: UK_SOURCE, imageUrl: "/images/colleges/manchester.jpg" },
+  { id: 900009, name: "University of Warwick", city: "Coventry", state: "United Kingdom", country: "United Kingdom", control: "public", size: 28000, sizeTier: "large", admissionRate: 0.14, costOfAttendance: 53400, netPrice: 53400, tuition: 37400, roomBoard: 16000, medianEarnings10yr: 85900, medianDebt: null, satAverage: null, earningsNote: LEO_NOTE, dataSource: UK_SOURCE, imageUrl: "/images/colleges/warwick.jpg" },
+  { id: 900010, name: "University of St Andrews", city: "St Andrews", state: "United Kingdom", country: "United Kingdom", control: "public", size: 10000, sizeTier: "medium", admissionRate: 0.08, costOfAttendance: 59500, netPrice: 59500, tuition: 44500, roomBoard: 15000, medianEarnings10yr: 78600, medianDebt: null, satAverage: null, earningsNote: LEO_NOTE, dataSource: UK_SOURCE, imageUrl: "/images/colleges/st-andrews.jpg" },
 
   // ------------------------------------------------------------- Greater China
   { id: 900011, name: "Tsinghua University", city: "Beijing", state: "China", country: "China", control: "public", size: 36000, sizeTier: "large", admissionRate: 0.05, costOfAttendance: 12500, netPrice: 12500, tuition: 4500, roomBoard: 8000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: CHINA_SOURCE, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Lawn_in_front_of_main_building_of_Tsinghua_University_2.JPG/960px-Lawn_in_front_of_main_building_of_Tsinghua_University_2.JPG" },
@@ -96,15 +116,15 @@ export const INTERNATIONAL_COLLEGES: College[] = [
   { id: 900021, name: "KAIST", city: "Daejeon", state: "South Korea", country: "South Korea", control: "public", size: 11000, sizeTier: "medium", admissionRate: 0.132, costOfAttendance: 13100, netPrice: 13100, tuition: 4100, roomBoard: 9000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: KR_SOURCE, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/IBS%E2%80%93KAIST_Campus_Building.jpg/960px-IBS%E2%80%93KAIST_Campus_Building.jpg" },
 
   // -------------------------------------------------------------------- Australia
-  { id: 900022, name: "University of Melbourne", city: "Melbourne", state: "Australia", country: "Australia", control: "public", size: 52000, sizeTier: "large", admissionRate: 0.77, costOfAttendance: 46200, netPrice: 46200, tuition: 29400, roomBoard: 16800, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: AU_SOURCE, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Aerial_panorama_of_Melbourne%27s_skyline_from_Carlton_North._September_2023.jpg/960px-Aerial_panorama_of_Melbourne%27s_skyline_from_Carlton_North._September_2023.jpg" },
-  { id: 900023, name: "University of Sydney", city: "Sydney", state: "Australia", country: "Australia", control: "public", size: 55000, sizeTier: "large", admissionRate: 0.30, costOfAttendance: 54200, netPrice: 54200, tuition: 37400, roomBoard: 16800, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: AU_SOURCE, imageUrl: "/images/colleges/sydney.jpg" },
-  { id: 900024, name: "Australian National University", city: "Canberra", state: "Australia", country: "Australia", control: "public", size: 20000, sizeTier: "large", admissionRate: 0.35, costOfAttendance: 53500, netPrice: 53500, tuition: 36700, roomBoard: 16800, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: AU_SOURCE, imageUrl: "/images/colleges/anu.jpg" },
-  { id: 900025, name: "University of New South Wales", city: "Sydney", state: "Australia", country: "Australia", control: "public", size: 61000, sizeTier: "large", admissionRate: 0.35, costOfAttendance: 48300, netPrice: 48300, tuition: 31500, roomBoard: 16800, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: AU_SOURCE, imageUrl: "/images/colleges/unsw.jpg" },
-  { id: 900026, name: "Monash University", city: "Melbourne", state: "Australia", country: "Australia", control: "public", size: 65000, sizeTier: "large", admissionRate: 0.40, costOfAttendance: 50000, netPrice: 50000, tuition: 33200, roomBoard: 16800, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: AU_SOURCE, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Iie_msa_campus_two.jpg/960px-Iie_msa_campus_two.jpg" },
+  { id: 900022, name: "University of Melbourne", city: "Melbourne", state: "Australia", country: "Australia", control: "public", size: 52000, sizeTier: "large", admissionRate: 0.77, costOfAttendance: 46200, netPrice: 46200, tuition: 29400, roomBoard: 16800, medianEarnings10yr: 47300, medianDebt: null, satAverage: null, earningsNote: QILT_NOTE, dataSource: AU_SOURCE, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Aerial_panorama_of_Melbourne%27s_skyline_from_Carlton_North._September_2023.jpg/960px-Aerial_panorama_of_Melbourne%27s_skyline_from_Carlton_North._September_2023.jpg" },
+  { id: 900023, name: "University of Sydney", city: "Sydney", state: "Australia", country: "Australia", control: "public", size: 55000, sizeTier: "large", admissionRate: 0.30, costOfAttendance: 54200, netPrice: 54200, tuition: 37400, roomBoard: 16800, medianEarnings10yr: 51500, medianDebt: null, satAverage: null, earningsNote: QILT_NOTE, dataSource: AU_SOURCE, imageUrl: "/images/colleges/sydney.jpg" },
+  { id: 900024, name: "Australian National University", city: "Canberra", state: "Australia", country: "Australia", control: "public", size: 20000, sizeTier: "large", admissionRate: 0.35, costOfAttendance: 53500, netPrice: 53500, tuition: 36700, roomBoard: 16800, medianEarnings10yr: 52900, medianDebt: null, satAverage: null, earningsNote: QILT_NOTE, dataSource: AU_SOURCE, imageUrl: "/images/colleges/anu.jpg" },
+  { id: 900025, name: "University of New South Wales", city: "Sydney", state: "Australia", country: "Australia", control: "public", size: 61000, sizeTier: "large", admissionRate: 0.35, costOfAttendance: 48300, netPrice: 48300, tuition: 31500, roomBoard: 16800, medianEarnings10yr: 53100, medianDebt: null, satAverage: null, earningsNote: QILT_NOTE, dataSource: AU_SOURCE, imageUrl: "/images/colleges/unsw.jpg" },
+  { id: 900026, name: "Monash University", city: "Melbourne", state: "Australia", country: "Australia", control: "public", size: 65000, sizeTier: "large", admissionRate: 0.40, costOfAttendance: 50000, netPrice: 50000, tuition: 33200, roomBoard: 16800, medianEarnings10yr: 51500, medianDebt: null, satAverage: null, earningsNote: QILT_NOTE, dataSource: AU_SOURCE, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Iie_msa_campus_two.jpg/960px-Iie_msa_campus_two.jpg" },
 
   // ------------------------------------------------------------------------ Italy
   { id: 900027, name: "Bocconi University", city: "Milan", state: "Italy", country: "Italy", control: "private-nonprofit", size: 15000, sizeTier: "large", admissionRate: 0.30, costOfAttendance: 31400, netPrice: 31400, tuition: 19400, roomBoard: 12000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: EU_SOURCE, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/94/Biblioteca_Universit%C3%A0_Bocconi.jpg" },
-  { id: 900028, name: "Politecnico di Milano", city: "Milan", state: "Italy", country: "Italy", control: "public", size: 47000, sizeTier: "large", admissionRate: 0.50, costOfAttendance: 15100, netPrice: 15100, tuition: 3100, roomBoard: 12000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: EU_SOURCE, imageUrl: "/images/colleges/polimi.jpg" },
+  { id: 900028, name: "Politecnico di Milano", city: "Milan", state: "Italy", country: "Italy", control: "public", size: 47000, sizeTier: "large", admissionRate: 0.50, costOfAttendance: 15100, netPrice: 15100, tuition: 3100, roomBoard: 12000, medianEarnings10yr: 33000, medianDebt: null, satAverage: null, earningsNote: POLIMI_NOTE, dataSource: EU_SOURCE, imageUrl: "/images/colleges/polimi.jpg" },
 
   // ------------------------------------------------------------------------ Spain
   { id: 900029, name: "IE University", city: "Madrid", state: "Spain", country: "Spain", control: "private-nonprofit", size: 8000, sizeTier: "medium", admissionRate: 0.32, costOfAttendance: 35700, netPrice: 35700, tuition: 24700, roomBoard: 11000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: EU_SOURCE, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/IE_Business_School_%28Madrid%29_01.jpg/960px-IE_Business_School_%28Madrid%29_01.jpg" },
@@ -118,8 +138,8 @@ export const INTERNATIONAL_COLLEGES: College[] = [
   // published range is the source here, not a general HEC Paris sticker price
   // — flagged to the student via `costNote` since "HEC Paris tuition" doesn't
   // mean the same thing here as it does for a school offering broad UG admission.
-  { id: 900031, name: "Sciences Po", city: "Paris", state: "France", country: "France", control: "public", size: 15000, sizeTier: "large", admissionRate: 0.20, costOfAttendance: 30000, netPrice: 30000, tuition: 17000, roomBoard: 13000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: EU_SOURCE, imageUrl: "/images/colleges/sciences-po.jpg" },
+  { id: 900031, name: "Sciences Po", city: "Paris", state: "France", country: "France", control: "public", size: 15000, sizeTier: "large", admissionRate: 0.20, costOfAttendance: 30000, netPrice: 30000, tuition: 17000, roomBoard: 13000, medianEarnings10yr: 50800, medianDebt: null, satAverage: null, earningsNote: SCIENCESPO_NOTE, dataSource: EU_SOURCE, imageUrl: "/images/colleges/sciences-po.jpg" },
   { id: 900032, name: "HEC Paris", city: "Jouy-en-Josas", state: "France", country: "France", control: "private-nonprofit", size: 4500, sizeTier: "small", admissionRate: 0.27, costOfAttendance: 39300, netPrice: 39300, tuition: 28300, roomBoard: 11000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: EU_SOURCE, costNote: "HEC Paris is mainly a graduate business school; this is its one undergraduate track (a double degree with Bocconi University), not a general HEC Paris price.", imageUrl: "/images/colleges/hec-paris.jpg" },
-  { id: 900033, name: "École Polytechnique", city: "Palaiseau", state: "France", country: "France", control: "public", size: 3400, sizeTier: "small", admissionRate: 0.11, costOfAttendance: 27600, netPrice: 27600, tuition: 13800, roomBoard: 13800, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: EU_SOURCE, imageUrl: "/images/colleges/polytechnique.webp" },
-  { id: 900034, name: "Sorbonne University", city: "Paris", state: "France", country: "France", control: "public", size: 55000, sizeTier: "large", admissionRate: 0.20, costOfAttendance: 16700, netPrice: 16700, tuition: 3700, roomBoard: 13000, medianEarnings10yr: null, medianDebt: null, satAverage: null, dataSource: EU_SOURCE, imageUrl: "/images/colleges/sorbonne.jpg" },
+  { id: 900033, name: "École Polytechnique", city: "Palaiseau", state: "France", country: "France", control: "public", size: 3400, sizeTier: "small", admissionRate: 0.11, costOfAttendance: 27600, netPrice: 27600, tuition: 13800, roomBoard: 13800, medianEarnings10yr: 65200, medianDebt: null, satAverage: null, earningsNote: POLYTECHNIQUE_NOTE, dataSource: EU_SOURCE, imageUrl: "/images/colleges/polytechnique.webp" },
+  { id: 900034, name: "Sorbonne University", city: "Paris", state: "France", country: "France", control: "public", size: 55000, sizeTier: "large", admissionRate: 0.20, costOfAttendance: 16700, netPrice: 16700, tuition: 3700, roomBoard: 13000, medianEarnings10yr: 34300, medianDebt: null, satAverage: null, earningsNote: SORBONNE_NOTE, dataSource: EU_SOURCE, imageUrl: "/images/colleges/sorbonne.jpg" },
 ];
