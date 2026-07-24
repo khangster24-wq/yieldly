@@ -70,6 +70,8 @@ function estimateAdmitProbability(
   usedAct: boolean;
   usedGpa: boolean;
   usedIb: boolean;
+  usedRigor: boolean;
+  usedEc: boolean;
 } {
   const base = college.admissionRate;
   if (base == null)
@@ -80,6 +82,8 @@ function estimateAdmitProbability(
       usedAct: false,
       usedGpa: false,
       usedIb: false,
+      usedRigor: false,
+      usedEc: false,
     };
 
   const unpersonalized = {
@@ -89,6 +93,8 @@ function estimateAdmitProbability(
     usedAct: false,
     usedGpa: false,
     usedIb: false,
+    usedRigor: false,
+    usedEc: false,
   };
   if (profile?.completedOnboarding !== true) return unpersonalized;
 
@@ -97,6 +103,8 @@ function estimateAdmitProbability(
   let usedAct = false;
   let usedGpa = false;
   let usedIb = false;
+  let usedRigor = false;
+  let usedEc = false;
 
   // Prefer a directly-reported SAT; fall back to the ACT converted via the
   // official College Board/ACT concordance table (src/lib/concordance.ts) so
@@ -127,23 +135,72 @@ function estimateAdmitProbability(
     signals.push((profile.ibScore - benchmarkIb) / 3);
     usedIb = true;
   }
+  // Course-rigor signal, combining weighted-GPA course load and AP results —
+  // both feed one "usedRigor" flag since they measure the same underlying
+  // thing (how hard a course load the student is taking), just from two
+  // angles. Neither is scored against a per-school benchmark, because rigor
+  // isn't something a school publishes a "typical applicant" figure for —
+  // these are self-contained, bounded heuristics, documented as estimates.
+  {
+    const rigorSignals: number[] = [];
+    // Weighted-minus-unweighted GPA gap as a rigor proxy: weighting scales
+    // vary a lot by school (some cap at 5.0, some don't), so there's no
+    // single "benchmark weighted GPA" to compare against honestly — the GAP
+    // between a student's own weighted and unweighted GPA is scale-agnostic
+    // and reflects how much AP/Honors credit-weighting they're earning.
+    if (profile.weightedGpa != null && profile.gpa != null) {
+      const gap = profile.weightedGpa - profile.gpa;
+      rigorSignals.push(clamp(gap * 0.8, 0, 1.2));
+    }
+    // AP classes: each scored exam contributes (score − 3) × 0.25 — a 5 is
+    // worth +0.5, a 3 is neutral, a 1 is −0.5. A class not yet exam-scored
+    // still earns a small flat +0.1 rigor credit for the coursework itself.
+    // Summed across every AP reported, capped so a very large AP load can't
+    // dominate GPA/SAT/IB in the average.
+    if (profile.apClasses.length > 0) {
+      const apEdge = profile.apClasses.reduce(
+        (sum, ap) => sum + (typeof ap.score === "number" ? (ap.score - 3) * 0.25 : 0.1),
+        0
+      );
+      rigorSignals.push(clamp(apEdge, -1.5, 2.5));
+    }
+    if (rigorSignals.length > 0) {
+      signals.push(rigorSignals.reduce((a, b) => a + b, 0));
+      usedRigor = true;
+    }
+  }
+  if (profile.extracurriculars.length > 0) {
+    // Tier weight per activity (CollegeVine-style 1–4 tiers, src/lib/extracurricular-tiers.ts),
+    // with the weight of each additional activity beyond the strongest one
+    // discounted 30% per step — so one standout Tier 1 activity counts far
+    // more than a long list of Tier 4 ones (matches how admissions readers
+    // actually describe weighing extracurriculars: a few real standouts, not
+    // a checklist). Capped well below GPA/SAT's influence, since this is a
+    // self-reported "guesstimate" the app can't verify, not a hard record.
+    const TIER_WEIGHT: Record<number, number> = { 1: 1.2, 2: 0.7, 3: 0.3, 4: 0.1 };
+    const sorted = [...profile.extracurriculars].sort((a, b) => a.tier - b.tier);
+    const ecEdge = sorted.reduce(
+      (sum, ec, i) => sum + TIER_WEIGHT[ec.tier] * Math.pow(0.7, i),
+      0
+    );
+    signals.push(clamp(ecEdge, 0, 2.0));
+    usedEc = true;
+  }
 
   if (signals.length === 0) return unpersonalized;
 
   const edge = signals.reduce((a, b) => a + b, 0) / signals.length;
   const multiplier = clamp(1 + edge * 0.26, 0.35, 2.4);
   const probability = clamp(base * multiplier, 0.02, 0.98);
-  return { probability, personalized: true, usedSat, usedAct, usedGpa, usedIb };
+  return { probability, personalized: true, usedSat, usedAct, usedGpa, usedIb, usedRigor, usedEc };
 }
 
 export function assessRisk(
   college: College,
   profile: StudentProfile | null
 ): RiskAssessment {
-  const { probability, personalized, usedSat, usedAct, usedGpa, usedIb } = estimateAdmitProbability(
-    college,
-    profile
-  );
+  const { probability, personalized, usedSat, usedAct, usedGpa, usedIb, usedRigor, usedEc } =
+    estimateAdmitProbability(college, profile);
 
   // No admission data → treat as an unpersonalized Target with a clear note.
   if (probability == null) {
@@ -174,6 +231,8 @@ export function assessRisk(
       usedSat && "SAT",
       usedAct && "ACT (converted to its SAT equivalent)",
       usedIb && "IB score",
+      usedRigor && "course rigor (weighted GPA / AP results)",
+      usedEc && "extracurriculars",
     ].filter(Boolean) as string[];
     const stats =
       statNames.length > 1

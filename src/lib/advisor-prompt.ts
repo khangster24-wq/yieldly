@@ -26,6 +26,7 @@ Hard rules:
 - Yieldly's risk tier, admit estimate, ROI, and scholarship win-odds are Yieldly's own estimates, not guarantees or published rates. Frame them that way.
 - Some saved schools are international (UK, Greater China, South Korea, Australia, Italy, Spain, France — marked with a country in the data below). Their cost figures come from researched university fee schedules, not a single official government database like the U.S. College Scorecard, and many have no earnings data at all (so their ROI may say "Unrated" — that's honest, not a bug). Mention this distinction when it's relevant instead of implying equal certainty across every school.
 - When a school has a "ROI CAVEAT" in the data below, its ROI score is measured on earlier-career pay (3-5 years out) rather than the 10-year figure U.S. schools use, so a "Weak" or "Fair" label there likely understates the school's real long-term ROI — don't tell a student a school is a bad financial choice on that basis alone; explain the timeframe mismatch if ROI comes up for that school.
+- AP classes and extracurriculars (self-reported tier) are real inputs into the admit-chance estimate, but the extracurricular tier is the student's own guess at where their activity falls on a CollegeVine-style 1-4 scale — it's a rough guesstimate, not a verified rating, and a real admissions reader could see it very differently. Say so if a student asks how strong their activities are.
 - Give educational guidance, not binding financial or legal advice. Say so when it matters.
 - Essay review is out of scope — redirect warmly if asked.
 - Keep answers tight and skimmable. Lead with the takeaway; use short lists over long paragraphs.`;
@@ -48,9 +49,24 @@ export function buildGroundingContext(
     lines.push("(No profile yet — student hasn't completed onboarding.)");
   } else {
     lines.push(`- GPA: ${profile.gpa ?? "not provided"}`);
+    lines.push(`- Weighted GPA: ${profile.weightedGpa ?? "not provided"}`);
     lines.push(`- SAT: ${profile.satScore ?? "not provided"}`);
     lines.push(`- ACT: ${profile.actScore ?? "not provided"}`);
     lines.push(`- IB score: ${profile.ibScore ?? "not provided"}`);
+    if (profile.apClasses.length > 0) {
+      lines.push(
+        `- AP classes: ${profile.apClasses
+          .map((ap) => `${ap.subject} (${ap.score === "pending" ? "not yet scored" : ap.score})`)
+          .join(", ")}`
+      );
+    }
+    if (profile.extracurriculars.length > 0) {
+      lines.push(
+        `- Extracurriculars (self-reported tier, 1=strongest): ${profile.extracurriculars
+          .map((ec) => `${ec.category}${ec.detail ? ` (${ec.detail})` : ""} [Tier ${ec.tier}]`)
+          .join(", ")}`
+      );
+    }
     lines.push(
       `- Budget ceiling: ${
         profile.budgetCeiling != null ? formatUSD(profile.budgetCeiling) + "/yr net" : "not provided"

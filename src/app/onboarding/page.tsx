@@ -10,6 +10,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { LogoIcon } from "@/components/brand/logo";
+import { ApClassesEditor } from "@/components/profile/ap-classes-editor";
+import { ExtracurricularsEditor } from "@/components/profile/extracurriculars-editor";
 import { saveProfile } from "@/lib/storage";
 import { REGIONS } from "@/lib/regions";
 import { EMPTY_PROFILE, type IncomeBracket, type StudentProfile } from "@/lib/types";
@@ -33,7 +35,7 @@ function bracketForBudget(budget: number): IncomeBracket {
   return "110001-plus";
 }
 
-const TOTAL_STEPS = 4;
+const TOTAL_STEPS = 6;
 
 export default function OnboardingPage() {
   const router = useRouter();
@@ -130,6 +132,28 @@ export default function OnboardingPage() {
                     />
                   </div>
                   <div className="space-y-2">
+                    <Label htmlFor="weighted-gpa">Weighted GPA</Label>
+                    <Input
+                      id="weighted-gpa"
+                      type="number"
+                      inputMode="decimal"
+                      step="0.01"
+                      min="0"
+                      max="6"
+                      placeholder="e.g. 4.4"
+                      value={draft.weightedGpa ?? ""}
+                      onChange={(e) =>
+                        setDraft((d) => ({
+                          ...d,
+                          weightedGpa: e.target.value ? Number(e.target.value) : null,
+                        }))
+                      }
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Whatever scale your school reports (often out of 5.0). We use the gap between this and your unweighted GPA as a course-rigor signal.
+                    </p>
+                  </div>
+                  <div className="space-y-2">
                     <Label htmlFor="sat">SAT score</Label>
                     <Input
                       id="sat"
@@ -201,6 +225,32 @@ export default function OnboardingPage() {
 
             {step === 1 && (
               <StepShell
+                eyebrow="Course rigor"
+                title="Taking any AP classes?"
+                sub="More AP classes and stronger scores are a real (small) plus for your chances. Taking the IB Diploma instead? Skip this page — it won't affect your chancing either way."
+              >
+                <ApClassesEditor
+                  value={draft.apClasses}
+                  onChange={(apClasses) => setDraft((d) => ({ ...d, apClasses }))}
+                />
+              </StepShell>
+            )}
+
+            {step === 2 && (
+              <StepShell
+                eyebrow="Extracurriculars"
+                title="What do you do outside class?"
+                sub="Add a few — pick the tier that honestly fits each one. This is a rough guesstimate to help you gauge where you stand, not how an admissions officer will actually read your application."
+              >
+                <ExtracurricularsEditor
+                  value={draft.extracurriculars}
+                  onChange={(extracurriculars) => setDraft((d) => ({ ...d, extracurriculars }))}
+                />
+              </StepShell>
+            )}
+
+            {step === 3 && (
+              <StepShell
                 eyebrow="Your budget"
                 title="What can you spend a year?"
                 sub="Net price — what you'd actually pay after aid, not the sticker. This anchors every ROI estimate."
@@ -231,7 +281,7 @@ export default function OnboardingPage() {
               </StepShell>
             )}
 
-            {step === 2 && (
+            {step === 4 && (
               <StepShell
                 eyebrow="Your regions"
                 title="Where do you want to be?"
@@ -259,7 +309,7 @@ export default function OnboardingPage() {
               </StepShell>
             )}
 
-            {step === 3 && (
+            {step === 5 && (
               <StepShell
                 eyebrow="Your major"
                 title="What are you into?"

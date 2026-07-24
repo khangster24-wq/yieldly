@@ -90,14 +90,39 @@ export type IncomeBracket =
   | "75001-110000"
   | "110001-plus";
 
+/** One AP class the student has taken (or is taking) and its exam score. */
+export interface ApClassEntry {
+  /** Official College Board course title, e.g. "AP Calculus BC". */
+  subject: string;
+  /** 1–5, or "pending" if the exam hasn't been taken/scored yet. */
+  score: 1 | 2 | 3 | 4 | 5 | "pending";
+}
+
+/** CollegeVine-style 1 (rarest/strongest) – 4 (most common) extracurricular tier. */
+export type ExtracurricularTier = 1 | 2 | 3 | 4;
+
+/** One extracurricular activity the student self-reports. */
+export interface ExtracurricularEntry {
+  /** Broad category, e.g. "Leadership Role", "Sports", "Internship". */
+  category: string;
+  /** Free-text specifics, e.g. "Captain, Varsity Soccer" — optional detail. */
+  detail: string;
+  tier: ExtracurricularTier;
+}
+
 /** Student profile collected during onboarding; used across all four features. */
 export interface StudentProfile {
   gpa: number | null; // unweighted 0–4.0
+  /** Weighted GPA, same scale as the student's school reports (often 0–5.0). */
+  weightedGpa: number | null;
   satScore: number | null; // 400–1600, or null if not provided
   /** ACT composite, 1–36 — converted to an SAT-equivalent via the official concordance for scoring. */
   actScore: number | null;
   /** IB Diploma total score, 0–45 (predicted or final) — or null if not on the IB track. */
   ibScore: number | null;
+  /** AP classes taken — skip if on the IB track (see onboarding disclaimer); doesn't affect chancing either way if empty. */
+  apClasses: ApClassEntry[];
+  extracurriculars: ExtracurricularEntry[];
   /** Rough annual budget ceiling (net price the family can absorb). */
   budgetCeiling: number | null;
   incomeBracket: IncomeBracket | null;
@@ -110,9 +135,12 @@ export interface StudentProfile {
 
 export const EMPTY_PROFILE: StudentProfile = {
   gpa: null,
+  weightedGpa: null,
   satScore: null,
   actScore: null,
   ibScore: null,
+  apClasses: [],
+  extracurriculars: [],
   budgetCeiling: null,
   incomeBracket: null,
   regions: [],

@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
+import { ApClassesEditor } from "@/components/profile/ap-classes-editor";
+import { ExtracurricularsEditor } from "@/components/profile/extracurriculars-editor";
 import { getProfile, saveProfile } from "@/lib/storage";
 import { REGIONS } from "@/lib/regions";
 import { EMPTY_PROFILE, type IncomeBracket, type StudentProfile } from "@/lib/types";
@@ -115,6 +117,29 @@ export default function SettingsPage() {
                 />
               </div>
               <div className="space-y-2">
+                <Label htmlFor="weighted-gpa">Weighted GPA</Label>
+                <Input
+                  id="weighted-gpa"
+                  type="number"
+                  inputMode="decimal"
+                  step="0.01"
+                  min="0"
+                  max="6"
+                  placeholder="e.g. 4.4"
+                  value={draft.weightedGpa ?? ""}
+                  onChange={(e) => {
+                    setDraft((d) => ({
+                      ...d,
+                      weightedGpa: e.target.value ? Number(e.target.value) : null,
+                    }));
+                    setSaved(false);
+                  }}
+                />
+                <p className="text-xs text-muted-foreground">
+                  Whatever scale your school reports (often out of 5.0). We use the gap between this and your unweighted GPA as a course-rigor signal.
+                </p>
+              </div>
+              <div className="space-y-2">
                 <Label htmlFor="sat">SAT score</Label>
                 <Input
                   id="sat"
@@ -180,6 +205,38 @@ export default function SettingsPage() {
                   Out of 45 (predicted or final). Leave blank if you&apos;re not on the IB Diploma track.
                 </p>
               </div>
+            </div>
+          </section>
+
+          <section>
+            <SectionLabel>Course rigor</SectionLabel>
+            <p className="mt-2 text-xs text-muted-foreground">
+              Taking the IB Diploma instead? Skip this section — it won&apos;t affect your chancing either way.
+            </p>
+            <div className="mt-3">
+              <ApClassesEditor
+                value={draft.apClasses}
+                onChange={(apClasses) => {
+                  setDraft((d) => ({ ...d, apClasses }));
+                  setSaved(false);
+                }}
+              />
+            </div>
+          </section>
+
+          <section>
+            <SectionLabel>Extracurriculars</SectionLabel>
+            <p className="mt-2 text-xs text-muted-foreground">
+              A rough guesstimate to help you gauge where you stand — not how an admissions officer will actually read your application.
+            </p>
+            <div className="mt-3">
+              <ExtracurricularsEditor
+                value={draft.extracurriculars}
+                onChange={(extracurriculars) => {
+                  setDraft((d) => ({ ...d, extracurriculars }));
+                  setSaved(false);
+                }}
+              />
             </div>
           </section>
 
