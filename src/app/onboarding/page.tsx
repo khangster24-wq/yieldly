@@ -152,6 +152,28 @@ export default function OnboardingPage() {
                     </p>
                   </div>
                   <div className="space-y-2">
+                    <Label htmlFor="act">ACT score</Label>
+                    <Input
+                      id="act"
+                      type="number"
+                      inputMode="numeric"
+                      step="1"
+                      min="1"
+                      max="36"
+                      placeholder="e.g. 32"
+                      value={draft.actScore ?? ""}
+                      onChange={(e) =>
+                        setDraft((d) => ({
+                          ...d,
+                          actScore: e.target.value ? Number(e.target.value) : null,
+                        }))
+                      }
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Out of 36. Only fill this in if you didn&apos;t take the SAT — we&apos;ll convert it using the official College Board/ACT concordance table.
+                    </p>
+                  </div>
+                  <div className="space-y-2">
                     <Label htmlFor="ib">IB score</Label>
                     <Input
                       id="ib"

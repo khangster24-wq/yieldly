@@ -6,6 +6,7 @@ import type {
   StudentProfile,
 } from "@/lib/types";
 import { regionForCollege } from "@/lib/geo";
+import { actToSat } from "@/lib/concordance";
 import { formatPercent } from "@/lib/utils";
 
 /**
@@ -66,6 +67,7 @@ function estimateAdmitProbability(
   probability: number | null;
   personalized: boolean;
   usedSat: boolean;
+  usedAct: boolean;
   usedGpa: boolean;
   usedIb: boolean;
 } {
@@ -75,6 +77,7 @@ function estimateAdmitProbability(
       probability: null,
       personalized: false,
       usedSat: false,
+      usedAct: false,
       usedGpa: false,
       usedIb: false,
     };
@@ -83,6 +86,7 @@ function estimateAdmitProbability(
     probability: base,
     personalized: false,
     usedSat: false,
+    usedAct: false,
     usedGpa: false,
     usedIb: false,
   };
@@ -90,12 +94,21 @@ function estimateAdmitProbability(
 
   const signals: number[] = [];
   let usedSat = false;
+  let usedAct = false;
   let usedGpa = false;
   let usedIb = false;
 
-  if (profile.satScore != null && college.satAverage != null) {
-    signals.push((profile.satScore - college.satAverage) / 100);
-    usedSat = true;
+  // Prefer a directly-reported SAT; fall back to the ACT converted via the
+  // official College Board/ACT concordance table (src/lib/concordance.ts) so
+  // the two never double-count the same underlying signal.
+  const effectiveSat =
+    profile.satScore ?? (profile.actScore != null ? actToSat(profile.actScore) : null);
+  const satWasConverted = profile.satScore == null && profile.actScore != null;
+
+  if (effectiveSat != null && college.satAverage != null) {
+    signals.push((effectiveSat - college.satAverage) / 100);
+    usedSat = !satWasConverted;
+    usedAct = satWasConverted;
   }
   if (profile.gpa != null) {
     // Benchmark GPA scales with selectivity: stricter at reach schools.
@@ -120,14 +133,14 @@ function estimateAdmitProbability(
   const edge = signals.reduce((a, b) => a + b, 0) / signals.length;
   const multiplier = clamp(1 + edge * 0.26, 0.35, 2.4);
   const probability = clamp(base * multiplier, 0.02, 0.98);
-  return { probability, personalized: true, usedSat, usedGpa, usedIb };
+  return { probability, personalized: true, usedSat, usedAct, usedGpa, usedIb };
 }
 
 export function assessRisk(
   college: College,
   profile: StudentProfile | null
 ): RiskAssessment {
-  const { probability, personalized, usedSat, usedGpa, usedIb } = estimateAdmitProbability(
+  const { probability, personalized, usedSat, usedAct, usedGpa, usedIb } = estimateAdmitProbability(
     college,
     profile
   );
@@ -156,16 +169,21 @@ export function assessRisk(
 
   let rationale: string;
   if (personalized) {
-    const statNames = [usedGpa && "GPA", usedSat && "SAT", usedIb && "IB score"].filter(
-      Boolean
-    ) as string[];
+    const statNames = [
+      usedGpa && "GPA",
+      usedSat && "SAT",
+      usedAct && "ACT (converted to its SAT equivalent)",
+      usedIb && "IB score",
+    ].filter(Boolean) as string[];
     const stats =
       statNames.length > 1
         ? `${statNames.slice(0, -1).join(", ")} and ${statNames[statNames.length - 1]}`
         : statNames[0];
     rationale = `Your ${stats} weighed against this school's ${formatPercent(
       college.admissionRate
-    )} admit rate${usedSat ? ` and ~${college.satAverage} average SAT` : ""}.`;
+    )} admit rate${
+      usedSat || usedAct ? ` and ~${college.satAverage} average SAT` : ""
+    }.`;
   } else {
     rationale = `Based on the school's ${formatPercent(
       college.admissionRate

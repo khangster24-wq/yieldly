@@ -94,6 +94,8 @@ export type IncomeBracket =
 export interface StudentProfile {
   gpa: number | null; // unweighted 0–4.0
   satScore: number | null; // 400–1600, or null if not provided
+  /** ACT composite, 1–36 — converted to an SAT-equivalent via the official concordance for scoring. */
+  actScore: number | null;
   /** IB Diploma total score, 0–45 (predicted or final) — or null if not on the IB track. */
   ibScore: number | null;
   /** Rough annual budget ceiling (net price the family can absorb). */
@@ -109,6 +111,7 @@ export interface StudentProfile {
 export const EMPTY_PROFILE: StudentProfile = {
   gpa: null,
   satScore: null,
+  actScore: null,
   ibScore: null,
   budgetCeiling: null,
   incomeBracket: null,

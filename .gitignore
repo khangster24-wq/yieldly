@@ -37,3 +37,4 @@ yarn-error.log*
 
 # personal/local Claude Code settings (machine-specific permission allowlist)
 .claude/settings.local.json
+.claude/scheduled_tasks.lock
